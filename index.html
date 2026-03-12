@@ -30,7 +30,16 @@
     <meta property="og:image" content="https://www.mujer360grados.com/img/og-image.jpg">
     <meta property="og:locale" content="es_ES">
     
-    <!-- Schema.org — BeautySalon + FAQPage + Person -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mujer 360 Grados | Centro de Estética y Bienestar en Parla, Madrid">
+    <meta name="twitter:description" content="Centro integral de estética y bienestar en Parla. Más de 35 años de experiencia. Programas Reset Woman 360: facial, corporal y bienestar.">
+    <meta name="twitter:image" content="https://www.mujer360grados.com/img/og-image.jpg">
+
+    <!-- Preload recursos críticos -->
+    <link rel="preload" as="video" href="hero-video.mp4" type="video/mp4">
+
+    <!-- Schema.org — BeautySalon + FAQPage + Person + BreadcrumbList + WebPage -->
     <script type="application/ld+json">
     [
       {
@@ -150,6 +159,64 @@
             }
           }
         ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://www.mujer360grados.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Programas Reset Woman 360",
+            "item": "https://www.mujer360grados.com/#programas"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tratamientos",
+            "item": "https://www.mujer360grados.com/#servicios"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Talleres y Eventos",
+            "item": "https://www.mujer360grados.com/#talleres"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Contacto",
+            "item": "https://www.mujer360grados.com/#contacto"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Mujer 360 Grados — Centro de Estética y Bienestar en Parla, Madrid",
+        "description": "Centro integral de estética y bienestar femenino en Parla, Madrid. Método Reset Woman 360: tratamientos faciales, corporales, nutrición y hábitos. Más de 35 años de experiencia.",
+        "url": "https://www.mujer360grados.com/",
+        "inLanguage": "es-ES",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Mujer 360 Grados",
+          "url": "https://www.mujer360grados.com/"
+        },
+        "about": {
+          "@type": "BeautySalon",
+          "name": "Mujer 360 Grados"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero-text h1", ".hero-text p", ".filosofia-intro", ".faq-question"]
+        },
+        "dateModified": "2026-03-12"
       }
     ]
     </script>
@@ -181,6 +248,15 @@
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--negro); }
         
         /* SKIP LINK */
+        /* Breadcrumb nav */
+        .breadcrumb-nav { background: var(--rosa-suave); padding: 0.4rem 2rem; font-size: 0.78rem; }
+        .breadcrumb-list { list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; flex-wrap: wrap; }
+        .breadcrumb-list li { display: flex; align-items: center; color: var(--gris); }
+        .breadcrumb-list li::after { content: "›"; margin-left: 0.5rem; color: var(--rosa-principal); }
+        .breadcrumb-list li:last-child::after { display: none; }
+        .breadcrumb-list a { color: var(--gris); text-decoration: none; }
+        .breadcrumb-list a:hover { color: var(--rosa-principal); }
+
         .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--rosa-principal); color: var(--blanco); padding: 0.8rem 1.5rem; font-size: 0.85rem; font-weight: 600; text-decoration: none; z-index: 99999; transition: top 0.2s ease; }
         .skip-link:focus { top: 1rem; }
 
@@ -488,6 +564,28 @@
             </div>
         </div>
     </header>
+
+    <!-- BREADCRUMBS visibles (SEO + accesibilidad) -->
+    <nav aria-label="Ruta de navegación" class="breadcrumb-nav">
+        <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" itemprop="item"><span itemprop="name">Inicio</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#programas" itemprop="item"><span itemprop="name">Programas</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#servicios" itemprop="item"><span itemprop="name">Tratamientos</span></a>
+                <meta itemprop="position" content="3">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#contacto" itemprop="item"><span itemprop="name">Contacto</span></a>
+                <meta itemprop="position" content="4">
+            </li>
+        </ol>
+    </nav>
 
     <!-- HERO -->
     <main id="main-content">
