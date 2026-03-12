@@ -10,6 +10,7 @@
     <!-- Meta Business Verification -->
     <!-- <meta name="facebook-domain-verification" content="TU_CODIGO_AQUI" /> -->
     
+    <meta name="robots" content="index, follow">
     <meta name="author" content="Coral López — Mujer 360 Grados">
     <meta name="geo.region" content="ES-M">
     <meta name="geo.placename" content="Parla, Madrid">
@@ -58,7 +59,12 @@
           {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "14:00"},
           {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:00", "closes": "20:00"}
         ],
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "7"},
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "7", "bestRating": "5", "worstRating": "1"},
+        "review": [
+          {"@type": "Review", "author": {"@type": "Person", "name": "Gabriela Álvarez"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Un centro super recomendable, tanto los tratamientos corporales como faciales. Y láser súper efectivo."},
+          {"@type": "Review", "author": {"@type": "Person", "name": "María Reina"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Grandes profesionales formados técnicamente que te asesoran para buscar la mejor solución para ti, desde diferentes servicios, técnicas y tratamientos."},
+          {"@type": "Review", "author": {"@type": "Person", "name": "Marina Lora"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Lugar donde encontrar detalles originales a buen precio como bolsos, alta bisutería, complementos, cosmética y grandes profesionales con trato muy agradable."}
+        ],
         "priceRange": "€€",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -174,6 +180,10 @@
         body { font-family: 'Raleway', sans-serif; color: var(--negro-suave); line-height: 1.8; background: var(--blanco); }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--negro); }
         
+        /* SKIP LINK */
+        .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--rosa-principal); color: var(--blanco); padding: 0.8rem 1.5rem; font-size: 0.85rem; font-weight: 600; text-decoration: none; z-index: 99999; transition: top 0.2s ease; }
+        .skip-link:focus { top: 1rem; }
+
         /* HEADER */
         header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: transparent; transition: all 0.4s ease; }
         header.scrolled { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); box-shadow: 0 2px 40px rgba(0,0,0,0.08); }
@@ -458,6 +468,7 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ir al contenido principal</a>
     <!-- HEADER -->
     <header id="header">
         <div class="header-inner">
@@ -479,6 +490,7 @@
     </header>
 
     <!-- HERO -->
+    <main id="main-content">
     <section class="hero">
         <div class="hero-video-container">
             <video class="hero-video" autoplay muted loop playsinline>
@@ -561,7 +573,10 @@
         </div>
         <div class="programas-grid">
             <div class="programa-card">
-                <img src="img/tratamiento-facial.jpg" alt="Programa Reset Facial — tratamiento facial en Parla, Madrid" class="programa-card-image" loading="lazy">
+                <picture>
+                    <source srcset="img/tratamiento-facial.webp" type="image/webp">
+                    <img src="img/tratamiento-facial.jpg" alt="Programa Reset Facial — tratamiento facial en Parla, Madrid" class="programa-card-image" loading="lazy">
+                </picture>
                 <div class="programa-card-content">
                     <h3><span>Programa</span>Reset Facial</h3>
                     <p>Recupera la luminosidad, firmeza y uniformidad de tu piel con tecnología de vanguardia y un protocolo diseñado para ti.</p>
@@ -575,7 +590,10 @@
                 </div>
             </div>
             <div class="programa-card">
-                <img src="img/maderoterapia.jpg" alt="Programa Reset Corporal — tratamiento corporal en Parla, Madrid" class="programa-card-image" loading="lazy">
+                <picture>
+                    <source srcset="img/maderoterapia.webp" type="image/webp">
+                    <img src="img/maderoterapia.jpg" alt="Programa Reset Corporal — tratamiento corporal en Parla, Madrid" class="programa-card-image" loading="lazy">
+                </picture>
                 <div class="programa-card-content">
                     <h3><span>Programa</span>Reset Corporal</h3>
                     <p>Remodela tu silueta, reduce la celulitis y mejora la calidad de tus tejidos con un enfoque integral y seguimiento continuo.</p>
@@ -589,7 +607,10 @@
                 </div>
             </div>
             <div class="programa-card">
-                <img src="img/ambiente-zen.jpg" alt="Programa Reset Bienestar — nutrición y hábitos en Parla, Madrid" class="programa-card-image" loading="lazy">
+                <picture>
+                    <source srcset="img/ambiente-zen.webp" type="image/webp">
+                    <img src="img/ambiente-zen.jpg" alt="Programa Reset Bienestar — nutrición y hábitos en Parla, Madrid" class="programa-card-image" loading="lazy">
+                </picture>
                 <div class="programa-card-content">
                     <h3><span>Programa</span>Reset Bienestar</h3>
                     <p>Transforma tu relación con la alimentación, equilibra tu energía y crea hábitos que perduran más allá del programa.</p>
@@ -623,7 +644,10 @@
                 </div>
                 <a href="https://wa.me/34620022456?text=Hola,%20me%20interesa%20la%20Asesoría%20de%20Imagen%20Integral" class="asesoria-cta">Solicitar información →</a>
             </div>
-            <img src="img/equipo.jpg" alt="Equipo de especialistas de Mujer 360 Grados, Parla" class="asesoria-image" loading="lazy">
+            <picture>
+                    <source srcset="img/equipo.webp" type="image/webp">
+                    <img src="img/equipo.jpg" alt="Equipo de especialistas de Mujer 360 Grados, Parla" class="asesoria-image" loading="lazy">
+                </picture>
         </div>
     </section>
 
@@ -673,7 +697,10 @@
     <!-- BOUTIQUE -->
     <section class="boutique" id="boutique">
         <div class="boutique-content">
-            <img src="img/herramientas.jpg" alt="Boutique de cosmética y complementos en Mujer 360 Grados, Parla" class="boutique-image" loading="lazy">
+            <picture>
+                    <source srcset="img/herramientas.webp" type="image/webp">
+                    <img src="img/herramientas.jpg" alt="Boutique de cosmética y complementos en Mujer 360 Grados, Parla" class="boutique-image" loading="lazy">
+                </picture>
             <div class="boutique-text">
                 <span class="section-label">La Boutique</span>
                 <h2>Cosmética Selecta y Complementos Exclusivos</h2>
@@ -699,7 +726,10 @@
         </div>
         <div class="talleres-grid">
             <div class="taller-card">
-                <img src="img/jornada-belleza.jpg" alt="Taller de Skincare en Mujer 360 Grados, Parla" class="taller-card-image" loading="lazy">
+                <picture>
+                    <source srcset="img/jornada-belleza.webp" type="image/webp">
+                    <img src="img/jornada-belleza.jpg" alt="Taller de Skincare en Mujer 360 Grados, Parla" class="taller-card-image" loading="lazy">
+                </picture>
                 <div class="taller-card-content">
                     <h4>Taller de Skincare</h4>
                     <p>Aprende a cuidar tu piel en casa con las técnicas y productos adecuados para tu tipo de piel.</p>
@@ -707,7 +737,10 @@
                 </div>
             </div>
             <div class="taller-card">
-                <img src="img/diagnostico-facial.jpg" alt="Beauty Party en Mujer 360 Grados, Parla" class="taller-card-image" loading="lazy">
+                <picture>
+                    <source srcset="img/diagnostico-facial.webp" type="image/webp">
+                    <img src="img/diagnostico-facial.jpg" alt="Beauty Party en Mujer 360 Grados, Parla" class="taller-card-image" loading="lazy">
+                </picture>
                 <div class="taller-card-content">
                     <h4>Beauty Party</h4>
                     <p>Celebra tu cumpleaños o despedida de soltera con amigas en un entorno diseñado para disfrutarlo.</p>
@@ -715,7 +748,10 @@
                 </div>
             </div>
             <div class="taller-card">
-                <img src="img/tratamiento-detalle.jpg" alt="Presentaciones de novedades en Mujer 360 Grados" class="taller-card-image" loading="lazy">
+                <picture>
+                    <source srcset="img/tratamiento-detalle.webp" type="image/webp">
+                    <img src="img/tratamiento-detalle.jpg" alt="Presentaciones de novedades en Mujer 360 Grados" class="taller-card-image" loading="lazy">
+                </picture>
                 <div class="taller-card-content">
                     <h4>Presentaciones</h4>
                     <p>Conoce las últimas novedades en tratamientos y productos de belleza antes que nadie.</p>
@@ -893,6 +929,8 @@
         <p>Reserva tu diagnóstico personalizado y sal con un plan real hecho para ti.</p>
         <a href="https://wa.me/34620022456?text=Hola,%20quiero%20reservar%20mi%20diagnóstico%20personalizado">Quiero mi diagnóstico →</a>
     </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer>
