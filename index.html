@@ -541,6 +541,50 @@
             .hero h1 { font-size: 2rem; }
             .datos-inner { flex-direction: column; gap: 1.5rem; }
         }
+
+        /* ── Testimonios en vídeo ───────────────────────────────── */
+        .testimonios-video-intro { text-align: center; max-width: 600px; margin: 0 auto 2rem; }
+        .testimonios-video-intro p { font-size: 0.9rem; color: var(--gris); font-style: italic; }
+        .testimonios-videos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 860px; margin: 0 auto 4rem; }
+        .testimonio-video-card { position: relative; background: var(--negro); overflow: hidden; }
+        .testimonio-video-wrapper { position: relative; width: 100%; padding-top: 177.78%; background: var(--negro); }
+        .testimonio-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .testimonio-video-nombre { padding: 0.8rem 1rem; background: var(--blanco); border-top: 2px solid var(--rosa-principal); }
+        .testimonio-video-nombre h4 { font-size: 0.85rem; margin-bottom: 0.1rem; }
+        .testimonio-video-nombre p { font-size: 0.7rem; color: var(--gris); }
+        .testimonio-video-nombre .testimonio-stars { color: var(--dorado); font-size: 0.7rem; margin-top: 0.2rem; }
+        .testimonios-divider { text-align: center; margin: 0 auto 2.5rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gris); }
+        .testimonios-divider::before, .testimonios-divider::after { content: ''; display: inline-block; width: 60px; height: 1px; background: var(--dorado); vertical-align: middle; margin: 0 1rem; }
+
+        /* ── Sección vídeo Reset Corporal ───────────────────────── */
+        .reset-corporal-video { padding: 6rem 2rem; background: var(--negro); position: relative; overflow: hidden; }
+        .reset-corporal-video::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(155,27,90,0.15) 0%, rgba(26,26,26,0) 60%); pointer-events: none; }
+        .reset-corporal-video-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .reset-corporal-video-texto { color: var(--blanco); }
+        .reset-corporal-video-texto .section-label { color: var(--dorado); }
+        .reset-corporal-video-texto h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--blanco); margin-bottom: 1.2rem; line-height: 1.2; }
+        .reset-corporal-video-texto h2 em { font-style: italic; color: var(--champagne); display: block; }
+        .reset-corporal-video-texto p { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.8; margin-bottom: 1.5rem; }
+        .reset-corporal-video-texto ul { list-style: none; padding: 0; margin-bottom: 2rem; }
+        .reset-corporal-video-texto ul li { font-size: 0.85rem; color: rgba(255,255,255,0.7); padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 0.6rem; }
+        .reset-corporal-video-texto ul li::before { content: '✦'; color: var(--dorado); font-size: 0.6rem; flex-shrink: 0; }
+        .reset-corporal-video-frame { position: relative; width: 100%; max-width: 360px; margin: 0 auto; padding-top: 177.78%; background: #111; box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
+        .reset-corporal-video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        @media (max-width: 768px) {
+            .testimonios-videos-grid { grid-template-columns: 1fr; max-width: 400px; }
+            .reset-corporal-video-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+
+        /* ── Precio diagnóstico ──────────────────────────────── */
+        .precio-diagnostico { margin: 1.5rem 0 2rem; padding: 1.2rem 1.5rem; background: rgba(255,255,255,0.07); border-left: 3px solid var(--dorado); }
+        .precio-tag { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 0.8rem; }
+        .precio-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--dorado); line-height: 1; }
+        .precio-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.6); }
+        .precio-desc { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin: 0; }
+        .precio-desc strong { color: var(--dorado); }
+        .precio-desc em { display: block; margin-top: 0.5rem; font-style: italic; color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+        .video-caption { text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.8rem; font-style: italic; }
+        .koibox-cta-wrapper { margin-top: 0.5rem; }
     </style>
 </head>
 <body>
@@ -724,6 +768,71 @@
         </div>
     </section>
 
+
+    <!-- VÍDEO RESET CORPORAL -->
+    <section class="reset-corporal-video" id="video-corporal">
+        <div class="reset-corporal-video-inner">
+
+            <!-- TEXTO IZQUIERDA -->
+            <div class="reset-corporal-video-texto">
+                <span class="section-label">Reset Woman 360 · Corporal</span>
+                <h2>Tu cuerpo tiene<em>una segunda oportunidad.</em></h2>
+                <p>
+                    Celulitis, flacidez, retención, grasa localizada. No son problemas
+                    de fuerza de voluntad — son problemas que necesitan un método.
+                    El Reset Corporal actúa sobre las cinco causas al mismo tiempo.
+                </p>
+                <ul>
+                    <li>Análisis corporal con dispositivo Tanita</li>
+                    <li>Drenaje linfático y desintoxicación profunda</li>
+                    <li>Radiofrecuencia corporal para flacidez</li>
+                    <li>Maderoterapia reductora intensiva</li>
+                    <li>Presoterapia para piernas y circulación</li>
+                </ul>
+
+                <!-- PRECIO + DESCUENTO -->
+                <div class="precio-diagnostico">
+                    <div class="precio-tag">
+                        <span class="precio-num">50 €</span>
+                        <span class="precio-label">Diagnóstico personalizado</span>
+                    </div>
+                    <p class="precio-desc">
+                        El diagnóstico tiene un coste de <strong>50 €</strong>. Si decides
+                        iniciar el programa Reset Corporal, ese importe se descuenta
+                        íntegramente del precio del programa.
+                        <br><em>No pagas el diagnóstico si te quedas — es una inversión, no un gasto.</em>
+                    </p>
+                </div>
+
+                <!-- BOTÓN KOIBOX -->
+                <div class="koibox-cta-wrapper">
+                    <a href="https://reservas.koibox.cloud/mujer-360"
+                       target="_blank"
+                       rel="noopener"
+                       class="hero-cta"
+                       style="display:inline-flex; margin-top:1rem;">
+                        Reservar mi diagnóstico →
+                    </a>
+                </div>
+            </div>
+
+            <!-- VÍDEO DERECHA -->
+            <div class="reset-corporal-video-player">
+                <div class="reset-corporal-video-frame">
+                    <iframe
+                        src="https://www.youtube.com/embed/V4sKlgRnC38?rel=0&modestbranding=1"
+                        title="Programa Reset Corporal Reset Woman 360 — Coral López, Mujer 360 Grados Parla Madrid"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">Coral López · Fundadora del método Reset Woman 360</p>
+            </div>
+
+        </div>
+    </section>
+
     <!-- ASESORÍA -->
     <section class="asesoria">
         <div class="asesoria-content">
@@ -869,6 +978,52 @@
                 <span>5.0 en Google · 7 reseñas verificadas</span>
             </div>
         </div>
+        <div class="testimonios-video-intro">
+            <p>Ellas lo vivieron. Aquí lo cuentan.</p>
+        </div>
+
+        <div class="testimonios-videos-grid">
+
+            <!-- TESTIMONIO VÍDEO 1 -->
+            <div class="testimonio-video-card">
+                <div class="testimonio-video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/-Zr2S8NaGdk?rel=0&modestbranding=1"
+                        title="Testimonio clienta Reset Woman 360 — Mujer 360 Grados Parla"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="testimonio-video-nombre">
+                    <h4>NOMBRE DE LA CLIENTA</h4>  <!-- ← Cambiar por el nombre real -->
+                    <p>Programa Reset Woman 360</p>
+                    <div class="testimonio-stars">★★★★★</div>
+                </div>
+            </div>
+
+            <!-- TESTIMONIO VÍDEO 2 -->
+            <div class="testimonio-video-card">
+                <div class="testimonio-video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/y4ms3FwpMuQ?rel=0&modestbranding=1"
+                        title="Testimonio clienta Reset Woman 360 — Mujer 360 Grados Parla"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="testimonio-video-nombre">
+                    <h4>NOMBRE DE LA CLIENTA</h4>  <!-- ← Cambiar por el nombre real -->
+                    <p>Programa Reset Woman 360</p>
+                    <div class="testimonio-stars">★★★★★</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="testimonios-divider">También lo dicen por escrito</div>
+
         <div class="testimonios-grid">
             <div class="testimonio-card">
                 <p class="testimonio-text">Un centro super recomendable, tanto los tratamientos corporales como faciales. Y láser súper efectivo.</p>
