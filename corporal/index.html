@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Corporal — Diagnóstico Gratuito | Mujer 360°</title>
+  <meta name="description" content="Diagnóstico corporal gratuito en Mujer 360°, Parla. Celulitis, flacidez, grasa localizada. Método Reset Woman 360. Reserva tu cita ahora.">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blanco:     #FFFFFF;
+      --crema:      #FDF8F5;
+      --crema-med:  #F5EDE6;
+      --crema-d:    #EDE0D6;
+      --fucsia:     #C4457A;
+      --fucsia-l:   #D4688F;
+      --fucsia-bg:  #FBF0F4;
+      --fucsia-x:   #F9E4EE;
+      --dorado:     #C9A96E;
+      --dorado-l:   #E8D5A8;
+      --gris-d:     #2C2420;
+      --gris-med:   #5A4840;
+      --gris-l:     #9A8880;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Jost', sans-serif;
+      --r:          0.5rem;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--blanco);
+      color: var(--gris-d);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── ANIMACIONES ─────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .au1 { animation: fadeUp 0.7s ease 0.2s both; }
+    .au2 { animation: fadeUp 0.7s ease 0.4s both; }
+    .au3 { animation: fadeUp 0.7s ease 0.6s both; }
+    .au4 { animation: fadeUp 0.7s ease 0.8s both; }
+    .au5 { animation: fadeUp 0.7s ease 1.0s both; }
+
+    /* ── UTILIDADES ──────────────────────────────── */
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--fucsia);
+      margin-bottom: 0.9rem;
+      display: block;
+    }
+    .titulo {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--gris-d);
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
+    }
+    .titulo em { font-style: italic; color: var(--fucsia); }
+    .cuerpo {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+    .divisor-fucsia {
+      width: 40px;
+      height: 2px;
+      background: var(--fucsia);
+      margin: 2rem 0;
+    }
+    .divisor-dorado {
+      width: 40px;
+      height: 1px;
+      background: var(--dorado);
+      margin: 1.5rem auto;
+    }
+    .inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    section { padding: 5rem 2rem; }
+
+    /* ── HEADER ──────────────────────────────────── */
+    .header {
+      background: var(--blanco);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--crema-d);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-logo {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      letter-spacing: 0.4em;
+      color: var(--gris-d);
+      text-transform: uppercase;
+    }
+    .header-sub {
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      color: var(--fucsia);
+      text-transform: uppercase;
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      background: var(--crema);
+      padding: 5rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 40%, var(--fucsia-x) 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-titulo {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 400;
+      color: var(--gris-d);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .hero-titulo em {
+      font-style: italic;
+      color: var(--fucsia);
+      display: block;
+    }
+    .hero-sub {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+    .btn-principal {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--fucsia);
+      color: var(--blanco);
+      padding: 1rem 2.4rem;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid var(--fucsia);
+    }
+    .btn-principal:hover {
+      background: transparent;
+      color: var(--fucsia);
+    }
+    .hero-badge {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--gris-l);
+    }
+    .hero-badge strong { color: var(--fucsia); font-weight: 500; }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-video-frame {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .hero-video-frame::before {
+      content: '';
+      position: absolute;
+      top: -10px; left: -10px;
+      right: 10px; bottom: 10px;
+      border: 1px solid var(--dorado-l);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-video-ratio {
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%;
+      background: var(--crema-d);
+      z-index: 1;
+      box-shadow: 0 20px 50px rgba(196,69,122,0.1);
+    }
+    .hero-video-ratio iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .hero-video-caption {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--gris-l);
+      margin-top: 0.8rem;
+      font-style: italic;
+    }
+
+    /* ── DOLOR ───────────────────────────────────── */
+    .dolor { background: var(--blanco); }
+    .dolor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .dolor-card {
+      padding: 2rem;
+      border: 1px solid var(--crema-d);
+      border-top: 3px solid var(--fucsia-l);
+      transition: box-shadow 0.3s ease, border-top-color 0.3s;
+    }
+    .dolor-card:hover {
+      box-shadow: 0 8px 30px rgba(196,69,122,0.08);
+      border-top-color: var(--fucsia);
+    }
+    .dolor-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .dolor-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--gris-d);
+      margin-bottom: 0.6rem;
+    }
+    .dolor-card p {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.75;
+    }
+
+    /* ── MÉTODO ──────────────────────────────────── */
+    .metodo { background: var(--crema); }
+    .metodo-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .pilares { display: flex; flex-direction: column; gap: 0; }
+    .pilar {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--crema-d);
+      align-items: flex-start;
+    }
+    .pilar:last-child { border-bottom: none; }
+    .pilar-num {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--dorado);
+      font-weight: 400;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 2.2rem;
+    }
+    .pilar h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gris-d);
+      margin-bottom: 0.3rem;
+    }
+    .pilar p {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.7;
+    }
+
+    /* ── PROGRAMAS ───────────────────────────────── */
+    .programas { background: var(--blanco); }
+    .programas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .prog-card {
+      background: var(--fucsia-bg);
+      padding: 2rem 1.8rem;
+      border-bottom: 3px solid var(--fucsia);
+    }
+    .prog-card-label {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--fucsia);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .prog-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--gris-d);
+      margin-bottom: 1.2rem;
+    }
+    .prog-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .prog-card ul li {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--crema-d);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .prog-card ul li:last-child { border-bottom: none; }
+    .prog-card ul li::before {
+      content: '✦';
+      color: var(--fucsia-l);
+      font-size: 0.45rem;
+      flex-shrink: 0;
+    }
+
+    /* ── TESTIMONIOS ─────────────────────────────── */
+    .testimonios { background: var(--crema); }
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+      max-width: 720px;
+    }
+    .test-card { background: var(--blanco); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .test-video {
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%;
+      background: var(--crema-d);
+    }
+    .test-video iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .test-info {
+      padding: 1rem 1.2rem;
+      border-top: 2px solid var(--fucsia);
+    }
+    .test-info h4 {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--gris-d);
+      margin-bottom: 0.2rem;
+    }
+    .test-info p { font-size: 0.7rem; color: var(--gris-l); }
+    .test-stars { color: var(--dorado); font-size: 0.75rem; margin-top: 0.3rem; }
+
+    /* ── CORAL ───────────────────────────────────── */
+    .coral { background: var(--blanco); }
+    .coral-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .coral-cita {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-style: italic;
+      color: var(--gris-d);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--fucsia);
+    }
+    .coral-nombre {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--gris-d);
+      margin-bottom: 0.2rem;
+    }
+    .coral-cargo {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fucsia);
+      font-weight: 500;
+    }
+    .coral-datos {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    .coral-dato-num {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--fucsia);
+      display: block;
+      line-height: 1;
+    }
+    .coral-dato-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gris-l);
+      margin-top: 0.3rem;
+    }
+    .coral-visual { position: relative; }
+    .coral-video-frame {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+    .coral-video-frame::after {
+      content: '';
+      position: absolute;
+      bottom: -10px; right: -10px;
+      width: 60%;
+      height: 60%;
+      background: var(--fucsia-x);
+      z-index: -1;
+    }
+    .coral-video-ratio {
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%;
+      background: var(--crema-d);
+      box-shadow: 0 16px 40px rgba(196,69,122,0.12);
+    }
+    .coral-video-ratio iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* ── CTA FINAL ───────────────────────────────── */
+    .cta-final {
+      background: var(--fucsia-bg);
+      text-align: center;
+      padding: 6rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 50% 120%, rgba(196,69,122,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-final-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .precio-badge {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      background: var(--blanco);
+      border: 1px solid var(--crema-d);
+      border-top: 2px solid var(--dorado);
+      padding: 0.7rem 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .precio-badge-num {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--fucsia);
+    }
+    .precio-badge-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gris-l);
+    }
+    .cta-final .titulo { margin-bottom: 1rem; }
+    .cta-final .cuerpo { max-width: 440px; margin: 0 auto 0.6rem; }
+    .cta-nota {
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--gris-l);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--gris-l);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .btn-whatsapp:hover { color: var(--fucsia); }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--gris-d);
+      padding: 2.5rem;
+      text-align: center;
+    }
+    footer p {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.9;
+    }
+    footer a { color: rgba(201,169,110,0.7); text-decoration: none; }
+    footer a:hover { color: var(--dorado); }
+
+
+        /* ── RESULTADOS CARRUSEL ──────────────────── */
+        .resultados { background: var(--crema); padding: 5rem 0 4rem; }
+        .resultados .inner { padding: 0 2rem; }
+        .resultados .cuerpo { margin-bottom: 2.5rem; }
+
+        .carrusel-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 0 3.5rem;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .carrusel-track {
+            display: flex;
+            gap: 1.2rem;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: grab;
+            user-select: none;
+        }
+        .carrusel-track:active { cursor: grabbing; }
+        .carrusel-item {
+            flex: 0 0 calc(33.333% - 0.8rem);
+            position: relative;
+            overflow: hidden;
+            background: var(--crema-d);
+        }
+        .carrusel-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+            pointer-events: none;
+        }
+        .carrusel-item:hover img { transform: scale(1.03); }
+        .carrusel-label {
+            display: block;
+            padding: 0.7rem 1rem;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            color: var(--gris-med);
+            background: var(--blanco);
+            border-top: 2px solid var(--fucsia);
+            text-align: center;
+        }
+
+        .carrusel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            z-index: 10;
+            width: 44px;
+            height: 44px;
+            background: var(--blanco);
+            border: 1px solid var(--crema-d);
+            border-radius: 50%;
+            font-size: 1.1rem;
+            color: var(--fucsia);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(196,69,122,0.12);
+        }
+        .carrusel-btn:hover {
+            background: var(--fucsia);
+            color: var(--blanco);
+            border-color: var(--fucsia);
+        }
+        .carrusel-prev { left: 0.3rem; }
+        .carrusel-next { right: 0.3rem; }
+
+        .resultados-nota {
+            text-align: center;
+            font-size: 0.72rem;
+            font-weight: 300;
+            color: var(--gris-l);
+            margin-top: 1.5rem;
+            font-style: italic;
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .carrusel-item { flex: 0 0 calc(80% - 0.6rem); }
+            .carrusel-item img { height: 260px; }
+            .carrusel-wrapper { padding: 0 2.5rem; }
+        }
+        @media (max-width: 480px) {
+            .carrusel-item { flex: 0 0 90%; }
+            .carrusel-item img { height: 220px; }
+        }
+
+        /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero-inner,
+      .metodo-inner,
+      .coral-inner      { grid-template-columns: 1fr; gap: 3rem; }
+      .dolor-grid,
+      .programas-grid   { grid-template-columns: 1fr; }
+      .testimonios-grid { grid-template-columns: 1fr; max-width: 360px; }
+      .hero::before     { display: none; }
+      .coral-datos      { gap: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 3.5rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-logo">Mujer 360°</div>
+  <div class="header-sub">Reset Woman · Parla, Madrid</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner inner">
+    <div>
+      <span class="eyebrow au1">Programa Reset Corporal</span>
+      <h1 class="hero-titulo au2">
+        Tu cuerpo no te ha fallado.<br>
+        <em>Le has faltado tú.</em>
+      </h1>
+      <p class="hero-sub au3">
+        Celulitis, flacidez, retención, grasa localizada que no desaparece por mucho que lo intentes.
+        No es fuerza de voluntad. Es que nadie te ha dado el método correcto hasta ahora.
+      </p>
+      <div class="au4">
+        <a href="https://reservas.koibox.cloud/mujer-360"
+           target="_blank"
+           rel="noopener"
+           class="btn-principal"
+           id="cta-hero"
+           onclick="trackClick('cta_hero')">
+          Reservar mi diagnóstico gratuito →
+        </a>
+        <p class="hero-badge">
+          Diagnóstico gratuito · <strong>Valorado en 50 €</strong> · Sin compromiso
+        </p>
+      </div>
+    </div>
+    <div class="hero-visual au5">
+      <div class="hero-video-frame">
+        <div class="hero-video-ratio">
+          <iframe
+            src="https://www.youtube.com/embed/V4sKlgRnC38?rel=0&modestbranding=1"
+            title="Coral López — Reset Corporal, Mujer 360° Parla"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <p class="hero-video-caption">Coral López · Fundadora del método Reset Woman 360</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOLOR -->
+<section class="dolor">
+  <div class="inner">
+    <span class="eyebrow">¿Te reconoces aquí?</span>
+    <h2 class="titulo">Lo que sientes<em> tiene nombre.</em></h2>
+    <p class="cuerpo" style="max-width:600px">
+      No es vanidad. Llevas tiempo sintiéndote incómoda en tu propio cuerpo
+      y eso afecta a todo lo demás — a cómo te vistes, a cómo te mueves, a cómo te sientes.
+    </p>
+    <div class="dolor-grid">
+      <div class="dolor-card">
+        <span class="dolor-card-icon">🌊</span>
+        <h3>Celulitis que no desaparece</h3>
+        <p>Has probado cremas, dietas, ejercicio. Algo mejora pero vuelve. Porque nadie ha tratado la causa real.</p>
+      </div>
+      <div class="dolor-card">
+        <span class="dolor-card-icon">💧</span>
+        <h3>Retención que te pesa</h3>
+        <p>Piernas hinchadas, sensación de pesadez constante. Tu circulación necesita apoyo profesional, no más agua.</p>
+      </div>
+      <div class="dolor-card">
+        <span class="dolor-card-icon">🔥</span>
+        <h3>Grasa localizada resistente</h3>
+        <p>Tripa, caderas, muslos que no responden aunque hagas todo bien. Hay zonas que el ejercicio solo no alcanza.</p>
+      </div>
+      <div class="dolor-card">
+        <span class="dolor-card-icon">🪷</span>
+        <h3>Flacidez que te frena</h3>
+        <p>Piel que ha perdido firmeza. Cada vez que te miras ves algo que no quieres ver y eso tiene solución.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="metodo">
+  <div class="inner metodo-inner">
+    <div>
+      <span class="eyebrow">El método Reset Woman 360</span>
+      <h2 class="titulo">Por qué los tratamientos sueltos<em> no funcionan.</em></h2>
+      <p class="cuerpo">
+        La celulitis, la flacidez y la grasa localizada tienen origen multifactorial:
+        circulación, alimentación, hormonas, hábitos. Atacar solo uno da resultados temporales.
+        Atacar los cinco a la vez da resultados reales.
+      </p>
+      <p class="cuerpo">
+        El Reset Corporal empieza con un diagnóstico concreto — no con una ficha genérica.
+        Analizamos tu cuerpo, identificamos las causas reales y diseñamos un protocolo
+        específico para ti.
+      </p>
+      <div class="divisor-fucsia"></div>
+      <a href="https://reservas.koibox.cloud/mujer-360"
+         target="_blank"
+         rel="noopener"
+         class="btn-principal"
+         onclick="trackClick('cta_metodo')">
+        Quiero mi diagnóstico gratuito →
+      </a>
+    </div>
+    <div class="pilares">
+      <div class="pilar">
+        <span class="pilar-num">01</span>
+        <div>
+          <h4>Diagnóstico Tanita</h4>
+          <p>Composición corporal real — grasa, músculo, agua, visceral. Sabes exactamente desde dónde partes.</p>
+        </div>
+      </div>
+      <div class="pilar">
+        <span class="pilar-num">02</span>
+        <div>
+          <h4>Drenaje linfático</h4>
+          <p>Activamos la circulación, reducimos retención y preparamos el cuerpo para los tratamientos.</p>
+        </div>
+      </div>
+      <div class="pilar">
+        <span class="pilar-num">03</span>
+        <div>
+          <h4>Radiofrecuencia corporal</h4>
+          <p>Tecnología de precisión para flacidez y remodelación. Sin dolor, sin recuperación.</p>
+        </div>
+      </div>
+      <div class="pilar">
+        <span class="pilar-num">04</span>
+        <div>
+          <h4>Maderoterapia reductora</h4>
+          <p>Técnica manual intensiva para celulitis y grasa localizada. Resultados visibles desde la primera sesión.</p>
+        </div>
+      </div>
+      <div class="pilar">
+        <span class="pilar-num">05</span>
+        <div>
+          <h4>Presoterapia</h4>
+          <p>Para piernas pesadas, retención persistente y activación del sistema linfático.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAS -->
+<section class="programas">
+  <div class="inner">
+    <span class="eyebrow">Dentro del Reset Corporal</span>
+    <h2 class="titulo">Un protocolo para<em> cada objetivo.</em></h2>
+    <p class="cuerpo" style="max-width:580px">
+      El diagnóstico determina cuál de estos programas es el tuyo.
+      No eliges el que más te gusta — eliges el que tu cuerpo necesita.
+    </p>
+    <div class="programas-grid">
+      <div class="prog-card">
+        <span class="prog-card-label">Programa</span>
+        <h3>Celulitis en fuga</h3>
+        <ul>
+          <li>Maderoterapia intensiva</li>
+          <li>Radiofrecuencia localizada</li>
+          <li>Drenaje y activación linfática</li>
+          <li>Pauta de mantenimiento en casa</li>
+        </ul>
+      </div>
+      <div class="prog-card">
+        <span class="prog-card-label">Programa</span>
+        <h3>Abdomen inteligente</h3>
+        <ul>
+          <li>Análisis Tanita de grasa visceral</li>
+          <li>Protocolo abdominal específico</li>
+          <li>Radiofrecuencia abdominal</li>
+          <li>Pautas de nutrición DISFLASH</li>
+        </ul>
+      </div>
+      <div class="prog-card">
+        <span class="prog-card-label">Programa</span>
+        <h3>Cuerpo en renacimiento</h3>
+        <ul>
+          <li>Radiofrecuencia corporal global</li>
+          <li>Presoterapia y drenaje</li>
+          <li>Protocolo de firmeza progresivo</li>
+          <li>Seguimiento continuo del equipo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS — CARRUSEL -->
+<section class="resultados">
+  <div class="inner">
+    <span class="eyebrow">Resultados reales</span>
+    <h2 class="titulo">Lo que consiguen<em> nuestras clientas.</em></h2>
+    <p class="cuerpo" style="max-width:560px">
+      Resultados reales obtenidos con el método Reset Corporal y tecnología SISNEO
+      en el centro Mujer 360°, Parla. Sin filtros, sin retoques.
+    </p>
+  </div>
+
+  <!-- CARRUSEL -->
+  <div class="carrusel-wrapper">
+    <button class="carrusel-btn carrusel-prev" aria-label="Anterior">&#8592;</button>
+    <div class="carrusel-track" id="carruselTrack">
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_coral.jpg" alt="Resultado Reset Corporal — Mujer 360° Parla" loading="lazy">
+        <span class="carrusel-label">Resultado real · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_11.png" alt="Resultado celulitis Reset Corporal — Mujer 360° Parla" loading="lazy">
+        <span class="carrusel-label">Celulitis en fuga · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_12.png" alt="Resultado celulitis lateral Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Celulitis y flacidez · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_13.png" alt="Resultado abdomen Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Abdomen inteligente · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_14.png" alt="Resultado vientre plano Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Vientre plano · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_15.png" alt="Resultado caderas Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Caderas · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_16.png" alt="Resultado glúteos Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Glúteos con memoria · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_17.png" alt="Resultado reafirmación Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Cuerpo en renacimiento · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="img/resultados/resultado_10.png" alt="Resultado silueta Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Resultado integral · Reset Corporal</span>
+      </div>
+    </div>
+    <button class="carrusel-btn carrusel-next" aria-label="Siguiente">&#8594;</button>
+  </div>
+
+  <p class="resultados-nota">
+    Resultados obtenidos con tecnología SISNEO · Casos reales de clientas de Mujer 360°, Parla
+  </p>
+</section>
+
+<!-- CORAL -->
+<section class="coral">
+  <div class="inner coral-inner">
+    <div>
+      <span class="eyebrow">Coral López · Fundadora</span>
+      <blockquote class="coral-cita">
+        Cuando una mujer entra sintiéndose incómoda en su cuerpo
+        y sale sabiendo exactamente qué le pasa y qué vamos a hacer,
+        eso es lo que me levanta cada mañana.
+      </blockquote>
+      <p class="coral-nombre">Coral López</p>
+      <p class="coral-cargo">Fundadora · Mujer 360° · Parla, Madrid</p>
+      <div class="coral-datos">
+        <div>
+          <span class="coral-dato-num">35</span>
+          <span class="coral-dato-label">Años de experiencia</span>
+        </div>
+        <div>
+          <span class="coral-dato-num">5</span>
+          <span class="coral-dato-label">Pilares del método</span>
+        </div>
+        <div>
+          <span class="coral-dato-num">5★</span>
+          <span class="coral-dato-label">En Google</span>
+        </div>
+      </div>
+    </div>
+    <div class="coral-visual">
+      <div class="coral-video-frame">
+        <div class="coral-video-ratio">
+          <iframe
+            src="https://www.youtube.com/embed/CUi2pWWVj4I?rel=0&modestbranding=1"
+            title="Coral López — Reset Woman 360"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <div class="precio-badge">
+      <span class="precio-badge-num">Gratuito</span>
+      <span class="precio-badge-label">Valorado en 50 €</span>
+    </div>
+    <h2 class="titulo">Es el momento<em> de volver a ti.</em></h2>
+    <p class="cuerpo">
+      En una sola sesión analizamos tu cuerpo, identificamos las causas reales
+      y saldrás con un plan concreto — no con folletos.
+    </p>
+    <span class="cta-nota">Sin compromiso. Sin letra pequeña. Solo resultados.</span>
+    <br>
+    <a href="https://reservas.koibox.cloud/mujer-360"
+       target="_blank"
+       rel="noopener"
+       class="btn-principal"
+       id="cta-final"
+       onclick="trackClick('cta_final')">
+      Reservar mi diagnóstico gratuito →
+    </a>
+    <br>
+    <a href="https://wa.me/34620022456?text=Hola,%20quiero%20información%20sobre%20el%20diagnóstico%20corporal%20gratuito"
+       target="_blank"
+       rel="noopener"
+       class="btn-whatsapp">
+      O escríbenos por WhatsApp →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    Mujer 360° · C/ San Roque, 49 · 28982 Parla, Madrid<br>
+    <a href="tel:+34620022456">620 02 24 56</a> ·
+    <a href="https://www.mujer360grados.com">www.mujer360grados.com</a><br>
+    Lunes a Viernes · 10:00–14:00 y 16:00–20:00
+  </p>
+</footer>
+
+
+<!-- CARRUSEL JS -->
+<script>
+(function() {
+  const track    = document.getElementById('carruselTrack');
+  const wrapper  = track ? track.parentElement : null;
+  if (!track || !wrapper) return;
+
+  const ITEM_W   = () => track.children[0].offsetWidth + 12; // gap 1.2rem ≈ 12px
+  const VISIBLE  = () => Math.floor(wrapper.offsetWidth / ITEM_W());
+  const TOTAL    = track.children.length;
+  let pos        = 0;
+  let autoTimer  = null;
+  let isHovered  = false;
+
+  function moveTo(n) {
+    const max = TOTAL - VISIBLE();
+    pos = Math.max(0, Math.min(n, max));
+    track.style.transform = `translateX(-${pos * ITEM_W()}px)`;
+  }
+
+  function next() { pos >= TOTAL - VISIBLE() ? moveTo(0) : moveTo(pos + 1); }
+  function prev() { pos <= 0 ? moveTo(TOTAL - VISIBLE()) : moveTo(pos - 1); }
+
+  // Auto-avance cada 3 segundos
+  function startAuto() {
+    autoTimer = setInterval(function() {
+      if (!isHovered) next();
+    }, 3000);
+  }
+  startAuto();
+
+  // Pausar al hacer hover
+  wrapper.addEventListener('mouseenter', function() { isHovered = true; });
+  wrapper.addEventListener('mouseleave', function() { isHovered = false; });
+
+  // Botones
+  wrapper.querySelector('.carrusel-prev').addEventListener('click', function() {
+    prev();
+    clearInterval(autoTimer);
+    startAuto();
+  });
+  wrapper.querySelector('.carrusel-next').addEventListener('click', function() {
+    next();
+    clearInterval(autoTimer);
+    startAuto();
+  });
+
+  // Drag / swipe con ratón
+  let startX = 0, dragging = false;
+  track.addEventListener('mousedown', function(e) {
+    startX = e.clientX;
+    dragging = true;
+    track.style.transition = 'none';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (!dragging) return;
+    dragging = false;
+    track.style.transition = '';
+    const diff = startX - e.clientX;
+    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+  });
+
+  // Touch / swipe móvil
+  let touchX = 0;
+  track.addEventListener('touchstart', function(e) { touchX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend',   function(e) {
+    const diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+  }, {passive:true});
+})();
+</script>
+
+<!-- TRACKING -->
+<script>
+  const LANDING_ID = 'corporal';
+  const SOURCE = new URLSearchParams(window.location.search).get('src') || 'directo';
+
+  window.addEventListener('load', function() {
+    sendEvent('visita', null);
+  });
+
+  function trackClick(ctaId) {
+    sendEvent('clic_koibox', ctaId);
+  }
+
+  function sendEvent(tipo, elemento) {
+    fetch('/.netlify/functions/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        landing: LANDING_ID,
+        tipo: tipo,
+        elemento: elemento,
+        source: SOURCE,
+        timestamp: new Date().toISOString(),
+        url: window.location.href
+      })
+    }).catch(function() {});
+  }
+</script>
+
+</body>
+</html>
