@@ -1,0 +1,19 @@
+# Robots.txt para mujer360grados.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.mujer360grados.com/sitemap.xml
+
+# Bloquear acceso a archivos internos
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /img/*.jpg$
+
+# Permitir acceso a Google
+User-agent: Googlebot
+Allow: /
+
+# Permitir acceso a Bing
+User-agent: Bingbot
+Allow: /

@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Corporal — Diagnóstico Gratuito | Mujer 360°</title>
+  <meta name="description" content="Diagnóstico corporal gratuito en Mujer 360°, Parla. Celulitis, flacidez, grasa localizada. Método Reset Woman 360. Reserva tu cita ahora.">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blanco:     #FFFFFF;
+      --crema:      #FDF8F5;
+      --crema-med:  #F5EDE6;
+      --crema-d:    #EDE0D6;
+      --fucsia:     #C4457A;
+      --fucsia-l:   #D4688F;
+      --fucsia-bg:  #FBF0F4;
+      --fucsia-x:   #F9E4EE;
+      --dorado:     #C9A96E;
+      --dorado-l:   #E8D5A8;
+      --gris-d:     #2C2420;
+      --gris-med:   #5A4840;
+      --gris-l:     #9A8880;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Jost', sans-serif;
+      --r:          0.5rem;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--blanco);
+      color: var(--gris-d);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── ANIMACIONES ─────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .au1 { animation: fadeUp 0.7s ease 0.2s both; }
+    .au2 { animation: fadeUp 0.7s ease 0.4s both; }
+    .au3 { animation: fadeUp 0.7s ease 0.6s both; }
+    .au4 { animation: fadeUp 0.7s ease 0.8s both; }
+    .au5 { animation: fadeUp 0.7s ease 1.0s both; }
+
+    /* ── UTILIDADES ──────────────────────────────── */
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--fucsia);
+      margin-bottom: 0.9rem;
+      display: block;
+    }
+    .titulo {
+      font-family: var(--font-serif);
+      font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+      font-weight: 400;
+      color: var(--gris-d);
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
+    }
+    .titulo em { font-style: italic; color: var(--fucsia); }
+    .cuerpo {
+      font-family: var(--font-sans);
+      font-size: 1.08rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+    .divisor-fucsia {
+      width: 40px;
+      height: 2px;
+      background: var(--fucsia);
+      margin: 2rem 0;
+    }
+    .divisor-dorado {
+      width: 40px;
+      height: 1px;
+      background: var(--dorado);
+      margin: 1.5rem auto;
+    }
+    .inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    section { padding: 5rem 2rem; }
+
+    /* ── HEADER ──────────────────────────────────── */
+    .header {
+      background: var(--blanco);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--crema-d);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-logo {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      letter-spacing: 0.4em;
+      color: var(--gris-d);
+      text-transform: uppercase;
+    }
+    .header-sub {
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      color: var(--fucsia);
+      text-transform: uppercase;
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      background: var(--crema);
+      padding: 5rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 40%, var(--fucsia-x) 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      max-width: 680px;
+    }
+    .hero-titulo {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+      font-weight: 400;
+      color: var(--gris-d);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .hero-titulo em {
+      font-style: italic;
+      color: var(--fucsia);
+      display: block;
+    }
+    .hero-sub {
+      font-family: var(--font-sans);
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+      max-width: 560px;
+    }
+    .btn-principal {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--fucsia);
+      color: var(--blanco);
+      padding: 1rem 2.4rem;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid var(--fucsia);
+    }
+    .btn-principal:hover {
+      background: transparent;
+      color: var(--fucsia);
+    }
+    .hero-badge {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--gris-l);
+    }
+    .hero-badge strong { color: var(--fucsia); font-weight: 500; }
+
+    /* ── VALIDACION ──────────────────────────────── */
+    .validacion { background: var(--blanco); }
+    .validacion-intro {
+      max-width: 620px;
+      margin-bottom: 3rem;
+    }
+    .validacion-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .validacion-card {
+      padding: 2rem;
+      border: 1px solid var(--crema-d);
+      border-top: 3px solid var(--fucsia-l);
+      transition: box-shadow 0.3s ease, border-top-color 0.3s;
+    }
+    .validacion-card:hover {
+      box-shadow: 0 8px 30px rgba(196,69,122,0.08);
+      border-top-color: var(--fucsia);
+    }
+    .validacion-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .validacion-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--gris-d);
+      margin-bottom: 0.6rem;
+    }
+    .validacion-card p {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.75;
+    }
+
+    /* ── POR QUÉ NO FUNCIONA ─────────────────────── */
+    .porque { background: var(--crema); }
+    .porque-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .porque-texto .cuerpo { max-width: 440px; }
+    /* ── RESPONSIVE ──────────────────────────────── */
+    .porque-cita {
+      background: var(--blanco);
+      border-left: 3px solid var(--fucsia);
+      padding: 2rem 2rem 2rem 2.5rem;
+      box-shadow: 0 8px 30px rgba(196,69,122,0.06);
+    }
+    .porque-cita blockquote {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-style: italic;
+      color: var(--gris-d);
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+    }
+    .porque-cita-firma {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fucsia);
+      font-weight: 500;
+    }
+
+    /* ── CORAL VÍDEO ─────────────────────────────── */
+    .coral-video-section {
+      background: var(--blanco);
+      padding: 5rem 2rem;
+    }
+    .coral-video-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .coral-video-texto .eyebrow { margin-bottom: 0.9rem; }
+    .coral-video-texto .titulo { margin-bottom: 1rem; }
+    .coral-video-texto .cuerpo { margin-bottom: 1.5rem; }
+    .coral-credenciales {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--crema-d);
+    }
+    .coral-cred-num {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--fucsia);
+      display: block;
+      line-height: 1;
+    }
+    .coral-cred-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gris-l);
+      margin-top: 0.3rem;
+    }
+    .coral-video-frame {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .coral-video-frame::before {
+      content: '';
+      position: absolute;
+      top: -10px; left: -10px;
+      right: 10px; bottom: 10px;
+      border: 1px solid var(--dorado-l);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .coral-video-frame::after {
+      content: '';
+      position: absolute;
+      bottom: -12px; right: -12px;
+      width: 55%;
+      height: 55%;
+      background: var(--fucsia-x);
+      z-index: -1;
+    }
+    .coral-video-ratio {
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%;
+      background: var(--crema-d);
+      z-index: 1;
+      box-shadow: 0 20px 50px rgba(196,69,122,0.12);
+    }
+    .coral-video-ratio iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .coral-video-caption {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--gris-l);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* ── 360 PILLARS ─────────────────────────────── */
+    .pillars-360 { background: var(--blanco); }
+    .pillars-360-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .pill-card {
+      padding: 2rem;
+      border: 1px solid var(--crema-d);
+      border-left: 3px solid var(--fucsia-l);
+      transition: box-shadow 0.3s ease, border-left-color 0.3s;
+    }
+    .pill-card:hover {
+      box-shadow: 0 8px 30px rgba(196,69,122,0.08);
+      border-left-color: var(--fucsia);
+    }
+    .pill-card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .pill-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gris-d);
+      margin-bottom: 0.5rem;
+    }
+    .pill-card p {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--gris-med);
+      line-height: 1.75;
+    }
+
+    /* ── RESULTADOS CARRUSEL ──────────────────────── */
+    .resultados { background: var(--crema); padding: 5rem 0 4rem; }
+    .resultados .inner { padding: 0 2rem; }
+    .resultados .cuerpo { margin-bottom: 2.5rem; }
+
+    .carrusel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 0 3.5rem;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .carrusel-track {
+      display: flex;
+      gap: 1.2rem;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: grab;
+      user-select: none;
+    }
+    .carrusel-track:active { cursor: grabbing; }
+    .carrusel-item {
+      flex: 0 0 calc(33.333% - 0.8rem);
+      position: relative;
+      overflow: hidden;
+      background: var(--crema-d);
+    }
+    .carrusel-item img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+      pointer-events: none;
+    }
+    .carrusel-item:hover img { transform: scale(1.03); }
+    .carrusel-label {
+      display: block;
+      padding: 0.7rem 1rem;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--gris-med);
+      background: var(--blanco);
+      border-top: 2px solid var(--fucsia);
+      text-align: center;
+    }
+    .carrusel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-60%);
+      z-index: 10;
+      width: 44px;
+      height: 44px;
+      background: var(--blanco);
+      border: 1px solid var(--crema-d);
+      border-radius: 50%;
+      font-size: 1.1rem;
+      color: var(--fucsia);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(196,69,122,0.12);
+    }
+    .carrusel-btn:hover {
+      background: var(--fucsia);
+      color: var(--blanco);
+      border-color: var(--fucsia);
+    }
+    .carrusel-prev { left: 0.3rem; }
+    .carrusel-next { right: 0.3rem; }
+    .resultados-nota {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--gris-l);
+      margin-top: 1.5rem;
+      font-style: italic;
+      padding: 0 2rem;
+    }
+
+    /* ── CTA FINAL ───────────────────────────────── */
+    .cta-final {
+      background: var(--fucsia-bg);
+      text-align: center;
+      padding: 6rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 120%, rgba(196,69,122,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-final-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .precio-badge {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      background: var(--blanco);
+      border: 1px solid var(--crema-d);
+      border-top: 2px solid var(--dorado);
+      padding: 0.7rem 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .precio-badge-num {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--fucsia);
+    }
+    .precio-badge-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gris-l);
+    }
+    .cta-final .titulo { margin-bottom: 1rem; }
+    .cta-final .cuerpo { max-width: 440px; margin: 0 auto 0.6rem; }
+    .cta-nota {
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--gris-l);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--gris-l);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .btn-whatsapp:hover { color: var(--fucsia); }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--gris-d);
+      padding: 2.5rem;
+      text-align: center;
+    }
+    footer p {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.9;
+    }
+    footer a { color: rgba(201,169,110,0.7); text-decoration: none; }
+    footer a:hover { color: var(--dorado); }
+
+    /* ── HERO CON VÍDEO DE FONDO ────────────────── */
+    @keyframes floatUp {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-8px); }
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 2rem 5rem;
+      background: var(--gris-d);
+    }
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      opacity: 0.45;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(44,36,32,0.75) 0%,
+        rgba(196,69,122,0.25) 50%,
+        rgba(44,36,32,0.80) 100%
+      );
+      z-index: 1;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      text-align: left;
+    }
+    .hero .eyebrow { color: var(--dorado-l); }
+    .hero .hero-titulo { color: var(--blanco); }
+    .hero .hero-titulo em { color: var(--dorado); }
+    .hero .hero-sub { color: rgba(255,255,255,0.75); }
+    .hero .hero-badge { color: rgba(255,255,255,0.5); }
+    .hero .hero-badge strong { color: var(--dorado); }
+
+    /* ── SCROLL REVEAL ───────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── LÍNEA DECORATIVA ANIMADA ────────────────── */
+    .linea-decorativa {
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--fucsia), var(--dorado));
+      margin: 2.5rem 0;
+      transition: width 1.2s ease;
+    }
+    .linea-decorativa.visible { width: 80px; }
+
+    /* ── TARJETAS CON HOVER RICO ─────────────────── */
+    .validacion-card {
+      transition: box-shadow 0.4s ease, border-top-color 0.3s, transform 0.4s ease;
+    }
+    .validacion-card:hover {
+      box-shadow: 0 16px 40px rgba(196,69,122,0.12);
+      border-top-color: var(--fucsia);
+      transform: translateY(-4px);
+    }
+    .pill-card {
+      transition: box-shadow 0.4s ease, border-left-color 0.3s, transform 0.4s ease;
+    }
+    .pill-card:hover {
+      box-shadow: 0 16px 40px rgba(196,69,122,0.10);
+      border-left-color: var(--fucsia);
+      transform: translateY(-4px);
+    }
+
+    /* ── CONTADORES ──────────────────────────────── */
+    .coral-cred-num {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--fucsia);
+      display: block;
+      line-height: 1;
+    }
+
+    /* ── BTN HOVER MEJORADO ──────────────────────── */
+    .btn-principal {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-principal::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.1);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+    .btn-principal:hover::after {
+      transform: translateX(0);
+    }
+
+    /* ── PORQUE CITA — EFECTO ENTRADA ───────────── */
+    .porque-cita {
+      opacity: 0;
+      transform: translateX(20px);
+      transition: opacity 0.9s ease 0.3s, transform 0.9s ease 0.3s;
+    }
+    .porque-cita.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    @media (max-width: 768px) {
+      .porque-inner,
+      .coral-video-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .validacion-grid,
+      .pillars-360-grid { grid-template-columns: 1fr; }
+      .hero::before { display: none; }
+      .coral-credenciales { gap: 1.5rem; }
+      .carrusel-item { flex: 0 0 calc(80% - 0.6rem); }
+      .carrusel-item img { height: 260px; }
+      .carrusel-wrapper { padding: 0 2.5rem; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 3.5rem 1.5rem; }
+      .carrusel-item { flex: 0 0 90%; }
+      .carrusel-item img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-logo">Mujer 360°</div>
+  <div class="header-sub">Reset Woman · Parla, Madrid</div>
+</header>
+
+
+<!-- 1. HERO — Vídeo de fondo -->
+<section class="hero">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="/video/hero-corporal.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <span class="eyebrow au1">Reset Corporal · Mujer 360°</span>
+    <h1 class="hero-titulo au2">
+      Un diagnóstico.<br>
+      Un plan real.<br>
+      <em>Sin promesas vacías.</em>
+    </h1>
+    <p class="hero-sub au3">
+      Sentirte incómoda en tu propio cuerpo afecta a todo — a cómo te vistes, 
+      a cómo te mueves, a cómo empiezas el día. Aquí no tratamos síntomas, 
+      entendemos causas. Y diseñamos un plan real, solo para ti.
+    </p>
+    <div class="au4">
+      <a href="https://reservas.koibox.cloud/mujer-360"
+         target="_blank"
+         rel="noopener"
+         class="btn-principal"
+         id="cta-hero"
+         onclick="trackClick('cta_hero')">
+        Quiero mi diagnóstico gratuito →
+      </a>
+      <p class="hero-badge">
+        Diagnóstico gratuito · <strong>Valorado en 50 €</strong> · Sin compromiso
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2. LAS 4 INCOMODIDADES -->
+<section class="validacion">
+  <div class="inner">
+    <div class="validacion-intro reveal">
+      <span class="eyebrow">¿Te reconoces aquí?</span>
+      <h2 class="titulo">Lo que sientes<em> tiene nombre.</em></h2>
+    </div>
+    <div class="validacion-grid">
+      <div class="validacion-card reveal reveal-delay-1">
+        <span class="validacion-card-icon">🌊</span>
+        <h3>Celulitis que no desaparece</h3>
+        <p>Mejora y vuelve. Siempre vuelve.</p>
+      </div>
+      <div class="validacion-card reveal reveal-delay-2">
+        <span class="validacion-card-icon">💧</span>
+        <h3>Retención que te pesa</h3>
+        <p>Piernas hinchadas, pesadez constante.</p>
+      </div>
+      <div class="validacion-card reveal reveal-delay-3">
+        <span class="validacion-card-icon">🔥</span>
+        <h3>Grasa localizada resistente</h3>
+        <p>Que no responde aunque hagas todo bien.</p>
+      </div>
+      <div class="validacion-card reveal reveal-delay-4">
+        <span class="validacion-card-icon">🪷</span>
+        <h3>Flacidez que te frena</h3>
+        <p>Piel que ha perdido firmeza. Tiene solución.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 3. FRASE DE RUPTURA + CITA CORAL -->
+<section class="porque">
+  <div class="inner porque-inner">
+    <div class="porque-texto reveal">
+      <span class="eyebrow">La verdad</span>
+      <h2 class="titulo">Has probado de todo.<em> No ha funcionado porque nadie te ha mirado de verdad.</em></h2>
+      <p class="cuerpo" style="max-width:480px">
+        Sin diagnóstico real, solo lo físico, sin protocolo personalizado — 
+        los resultados no duran. Nunca duran.
+      </p>
+      <div class="linea-decorativa"></div>
+      <a href="https://reservas.koibox.cloud/mujer-360"
+         target="_blank"
+         rel="noopener"
+         class="btn-principal"
+         onclick="trackClick('cta_ruptura')">
+        Quiero mi diagnóstico gratuito →
+      </a>
+    </div>
+    <div class="porque-cita">
+      <blockquote>
+        "Llevo 35 años viendo lo mismo: mujeres que han probado de todo y nada les dura. No es el tratamiento — es que nadie les ha mirado de verdad."
+      </blockquote>
+      <p class="porque-cita-firma">Coral López · Fundadora · Mujer 360°</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. LOS 4 FRENTES DEL 360 -->
+<section class="pillars-360">
+  <div class="inner">
+    <div class="reveal">
+      <span class="eyebrow">El método Reset Woman 360</span>
+      <h2 class="titulo">No solo tu cuerpo.<em> Los 360 grados.</em></h2>
+    </div>
+    <div class="pillars-360-grid">
+      <div class="pill-card reveal reveal-delay-1">
+        <span class="pill-card-icon">🫀</span>
+        <h3>Tu cuerpo</h3>
+        <p>Diagnóstico real + aparatología de precisión donde lo necesitas.</p>
+      </div>
+      <div class="pill-card reveal reveal-delay-2">
+        <span class="pill-card-icon">🥗</span>
+        <h3>Tu alimentación</h3>
+        <p>Método DISFLASH adaptado a ti. Sin dietas de choque.</p>
+      </div>
+      <div class="pill-card reveal reveal-delay-3">
+        <span class="pill-card-icon">🔄</span>
+        <h3>Tus hábitos</h3>
+        <p>Pautas reales que puedas mantener fuera de la cabina.</p>
+      </div>
+      <div class="pill-card reveal reveal-delay-4">
+        <span class="pill-card-icon">🧠</span>
+        <h3>Tu cabeza</h3>
+        <p>Cómo te sientes contigo misma forma parte del resultado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7. RESULTADOS REALES — CARRUSEL -->
+<section class="resultados">
+  <div class="inner">
+    <span class="eyebrow">Resultados reales</span>
+    <h2 class="titulo">Lo que consiguen<em> nuestras clientas.</em></h2>
+    <p class="cuerpo" style="max-width:560px">
+      Resultados reales obtenidos con el método Reset Corporal y tecnología SISNEO
+      en el centro Mujer 360°, Parla. Sin filtros, sin retoques.
+    </p>
+  </div>
+  <div class="carrusel-wrapper">
+    <button class="carrusel-btn carrusel-prev" aria-label="Anterior">&#8592;</button>
+    <div class="carrusel-track" id="carruselTrack">
+      <div class="carrusel-item">
+        <img src="/img/resultados/18.png" alt="Resultado Reset Corporal — Mujer 360° Parla" loading="lazy">
+        <span class="carrusel-label">Resultado real · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/11.png" alt="Resultado celulitis Reset Corporal — Mujer 360° Parla" loading="lazy">
+        <span class="carrusel-label">Celulitis en fuga · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/12.png" alt="Resultado celulitis lateral Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Celulitis y flacidez · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/13.png" alt="Resultado abdomen Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Abdomen inteligente · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/14.png" alt="Resultado vientre plano Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Vientre plano · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/15.png" alt="Resultado caderas Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Caderas · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/16.png" alt="Resultado glúteos Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Glúteos con memoria · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/17.png" alt="Resultado reafirmación Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Cuerpo en renacimiento · Reset Corporal</span>
+      </div>
+      <div class="carrusel-item">
+        <img src="/img/resultados/10.png" alt="Resultado silueta Reset Corporal" loading="lazy">
+        <span class="carrusel-label">Resultado integral · Reset Corporal</span>
+      </div>
+    </div>
+    <button class="carrusel-btn carrusel-next" aria-label="Siguiente">&#8594;</button>
+  </div>
+  <p class="resultados-nota">
+    Resultados obtenidos con tecnología SISNEO · Casos reales de clientas de Mujer 360°, Parla
+  </p>
+</section>
+
+
+<!-- 8. CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <div class="precio-badge">
+      <span class="precio-badge-num">Gratuito</span>
+      <span class="precio-badge-label">Valorado en 50 €</span>
+    </div>
+    <h2 class="titulo">Es el momento<em> de volver a ti.</em></h2>
+    <p class="cuerpo">
+      En una sola sesión analizamos tu cuerpo, identificamos las causas reales
+      y saldrás con un plan concreto — no con folletos.
+    </p>
+    <span class="cta-nota">Sin compromiso. Sin letra pequeña. Solo resultados.</span>
+    <br>
+    <a href="https://reservas.koibox.cloud/mujer-360"
+       target="_blank"
+       rel="noopener"
+       class="btn-principal"
+       id="cta-final"
+       onclick="trackClick('cta_final')">
+      Reservar mi diagnóstico gratuito →
+    </a>
+    <br>
+    <a href="https://wa.me/34620022456?text=Hola,%20quiero%20información%20sobre%20el%20diagnóstico%20corporal%20gratuito"
+       target="_blank"
+       rel="noopener"
+       class="btn-whatsapp">
+      O escríbenos por WhatsApp →
+    </a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    Mujer 360° · C/ San Roque, 49 · 28982 Parla, Madrid<br>
+    <a href="tel:+34620022456">620 02 24 56</a> ·
+    <a href="https://www.mujer360grados.com">www.mujer360grados.com</a><br>
+    Lunes a Viernes · 10:00–14:00 y 16:00–20:00
+  </p>
+</footer>
+
+
+<!-- SCROLL REVEAL + CONTADORES + EFECTOS -->
+<script>
+// ── SCROLL REVEAL ─────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal, .porque-cita, .linea-decorativa');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => observer.observe(el));
+
+// ── CONTADORES ANIMADOS ────────────────────────────
+function animateCounter(el, target, suffix, duration) {
+  let start = 0;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start += step;
+    if (start >= target) {
+      el.textContent = target + suffix;
+      clearInterval(timer);
+    } else {
+      el.textContent = Math.floor(start) + suffix;
+    }
+  }, 16);
+}
+
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counters = entry.target.querySelectorAll('.coral-cred-num');
+      counters.forEach(c => {
+        const text = c.textContent.trim();
+        if (text === '35')   animateCounter(c, 35, '', 1200);
+        if (text === '360°') animateCounter(c, 360, '°', 1500);
+        if (text === '5★')   { setTimeout(() => c.textContent = '5★', 800); }
+      });
+      counterObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const credSection = document.querySelector('.coral-credenciales');
+if (credSection) counterObs.observe(credSection);
+</script>
+<script>
+(function() {
+  const track    = document.getElementById('carruselTrack');
+  const wrapper  = track ? track.parentElement : null;
+  if (!track || !wrapper) return;
+
+  const ITEM_W   = () => track.children[0].offsetWidth + 12;
+  const VISIBLE  = () => Math.floor(wrapper.offsetWidth / ITEM_W());
+  const TOTAL    = track.children.length;
+  let pos        = 0;
+  let autoTimer  = null;
+  let isHovered  = false;
+
+  function moveTo(n) {
+    const max = TOTAL - VISIBLE();
+    pos = Math.max(0, Math.min(n, max));
+    track.style.transform = `translateX(-${pos * ITEM_W()}px)`;
+  }
+
+  function next() { pos >= TOTAL - VISIBLE() ? moveTo(0) : moveTo(pos + 1); }
+  function prev() { pos <= 0 ? moveTo(TOTAL - VISIBLE()) : moveTo(pos - 1); }
+
+  function startAuto() {
+    autoTimer = setInterval(function() {
+      if (!isHovered) next();
+    }, 3000);
+  }
+  startAuto();
+
+  wrapper.addEventListener('mouseenter', function() { isHovered = true; });
+  wrapper.addEventListener('mouseleave', function() { isHovered = false; });
+
+  wrapper.querySelector('.carrusel-prev').addEventListener('click', function() {
+    prev(); clearInterval(autoTimer); startAuto();
+  });
+  wrapper.querySelector('.carrusel-next').addEventListener('click', function() {
+    next(); clearInterval(autoTimer); startAuto();
+  });
+
+  let startX = 0, dragging = false;
+  track.addEventListener('mousedown', function(e) {
+    startX = e.clientX; dragging = true; track.style.transition = 'none';
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (!dragging) return;
+    dragging = false; track.style.transition = '';
+    const diff = startX - e.clientX;
+    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+  });
+
+  let touchX = 0;
+  track.addEventListener('touchstart', function(e) { touchX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', function(e) {
+    const diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+  }, {passive:true});
+})();
+</script>
+
+<!-- TRACKING -->
+<script>
+  const LANDING_ID = 'corporal';
+  const SOURCE = new URLSearchParams(window.location.search).get('src') || 'directo';
+
+  window.addEventListener('load', function() {
+    sendEvent('visita', null);
+  });
+
+  function trackClick(ctaId) {
+    sendEvent('clic_koibox', ctaId);
+  }
+
+  function sendEvent(tipo, elemento) {
+    fetch('/.netlify/functions/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        landing: LANDING_ID,
+        tipo: tipo,
+        elemento: elemento,
+        source: SOURCE,
+        timestamp: new Date().toISOString(),
+        url: window.location.href
+      })
+    }).catch(function() {});
+  }
+</script>
+
+</body>
+</html>
