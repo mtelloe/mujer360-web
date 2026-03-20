@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mujer 360 Grados · Centro de Estética Integral en Parla</title>
+  <meta name="description" content="Centro de estética integral en Parla, Madrid. 35 años de experiencia. Tratamientos faciales, corporales, nutrición, boutique y talleres. Diagnóstico personalizado 360°.">
+  <link rel="canonical" href="https://www.mujer360grados.com/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Schema BeautySalon -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Mujer 360 Grados",
+    "image": "img/hero/coral-cabina-facial.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle San Roque, 49",
+      "addressLocality": "Parla",
+      "postalCode": "28982",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34620022456",
+    "url": "https://www.mujer360grados.com",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "10:00",
+        "closes": "14:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "16:00",
+        "closes": "20:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "47"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Coral López",
+      "jobTitle": "Fundadora y Directora",
+      "description": "Esteticista con más de 35 años de experiencia en tratamientos faciales, corporales y bienestar integral."
+    }
+  }
+  </script>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       RESET & VARIABLES
+       ═══════════════════════════════════════════════════════ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Manrope', system-ui, sans-serif;
+      
+      --blanco: #FAFAF8;
+      --crema: #F5F0EB;
+      --arena: #E8E0D8;
+      --gris-suave: #B8AFA6;
+      --gris-medio: #7A7067;
+      --gris-oscuro: #3D3530;
+      --negro: #1E1A17;
+      
+      --rosa-suave: #C4697A;
+      --rosa-profundo: #9B1B5A;
+      --dorado: #C9A96E;
+      --dorado-claro: #D4C4A0;
+      
+      --espaciado-seccion: clamp(5rem, 10vw, 9rem);
+      --max-ancho: 1200px;
+      --max-estrecho: 780px;
+    }
+
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--gris-oscuro);
+      background: var(--blanco);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ */
+    .header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+    .header.scrolled {
+      background: rgba(250,250,248,0.97);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+      padding: 0.8rem 2rem;
+    }
+    .header.scrolled .logo { color: var(--negro); }
+    .header.scrolled .nav-link { color: var(--gris-oscuro); }
+    .header.scrolled .nav-link:hover { color: var(--rosa-profundo); }
+    
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--blanco);
+      transition: color 0.4s;
+    }
+    .logo span { font-weight: 300; font-style: italic; }
+    
+    nav { display: flex; gap: 2rem; align-items: center; }
+    .nav-link {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: var(--dorado); }
+    
+    .nav-cta {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blanco);
+      background: var(--rosa-profundo);
+      padding: 0.7rem 1.6rem;
+      transition: all 0.3s;
+    }
+    .nav-cta:hover { background: var(--rosa-suave); }
+
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .menu-toggle span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--blanco); margin: 5px 0;
+      transition: all 0.3s;
+    }
+    .header.scrolled .menu-toggle span { background: var(--negro); }
+
+    /* ═══════════════════════════════════════════════════════
+       HERO — Foto a sangre estilo editorial
+       ═══════════════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: 65% center;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(30,26,23,0.85) 0%,
+        rgba(30,26,23,0.4) 40%,
+        rgba(30,26,23,0.15) 70%,
+        rgba(30,26,23,0.25) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: var(--max-ancho);
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 1.2rem;
+      opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--blanco);
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--dorado-claro);
+    }
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      max-width: 460px;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp 0.8s ease 0.7s forwards;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blanco);
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 1rem 2.2rem;
+      transition: all 0.3s;
+      opacity: 0; animation: fadeUp 0.8s ease 0.9s forwards;
+    }
+    .hero-cta:hover {
+      background: var(--blanco);
+      color: var(--negro);
+      border-color: var(--blanco);
+    }
+    .hero-cta svg { width: 14px; height: 14px; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       BARRA DE DATOS (35 años, 5 estrellas, etc.)
+       ═══════════════════════════════════════════════════════ */
+    .barra-datos {
+      background: var(--negro);
+      padding: 2rem 2rem;
+    }
+    .barra-datos-inner {
+      max-width: var(--max-ancho);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .dato {
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+    }
+    .dato-numero {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--dorado);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .dato-texto {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gris-suave);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       SECCIÓN GENÉRICA
+       ═══════════════════════════════════════════════════════ */
+    .seccion {
+      padding: var(--espaciado-seccion) 2rem;
+    }
+    .seccion-inner {
+      max-width: var(--max-ancho);
+      margin: 0 auto;
+    }
+    .seccion-eyebrow {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--rosa-profundo);
+      margin-bottom: 1rem;
+    }
+    .seccion-titulo {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--negro);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .seccion-titulo em { font-style: italic; }
+
+    /* ═══════════════════════════════════════════════════════
+       FILOSOFÍA — Grid texto + imagen
+       ═══════════════════════════════════════════════════════ */
+    .filosofia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .filosofia-texto p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--gris-medio);
+      margin-bottom: 1.5rem;
+    }
+    .filosofia-texto p:first-of-type::first-letter {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.8;
+      margin-right: 0.5rem;
+      color: var(--rosa-profundo);
+      font-weight: 300;
+    }
+    .filosofia-firma {
+      margin-top: 2rem;
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--gris-oscuro);
+    }
+    .filosofia-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .filosofia-img-wrap img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .filosofia-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 30%;
+      background: linear-gradient(to top, rgba(245,240,235,0.4), transparent);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       CONCEPTO 360 — Imagen a sangre + texto overlay
+       ═══════════════════════════════════════════════════════ */
+    .concepto {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--negro);
+    }
+    .concepto-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+    }
+    .concepto-content {
+      position: relative; z-index: 2;
+      max-width: var(--max-ancho);
+      margin: 0 auto;
+      padding: var(--espaciado-seccion) 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .concepto-texto .seccion-eyebrow { color: var(--dorado); }
+    .concepto-texto .seccion-titulo { color: var(--blanco); }
+    .concepto-texto p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+    .concepto-pilares {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .pilar {
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      transition: all 0.3s;
+    }
+    .pilar:hover {
+      border-color: var(--dorado);
+      background: rgba(201,169,110,0.06);
+    }
+    .pilar-nombre {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--blanco);
+      margin-bottom: 0.4rem;
+    }
+    .pilar-desc {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       PROGRAMAS — Tarjetas por resultado
+       ═══════════════════════════════════════════════════════ */
+    .programas { background: var(--crema); }
+    .programas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .programa-card {
+      background: var(--blanco);
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: transform 0.3s;
+    }
+    .programa-card:hover { transform: translateY(-4px); }
+    .programa-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--rosa-profundo);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .programa-card:hover::before { transform: scaleX(1); }
+    .programa-icono {
+      width: 40px; height: 40px;
+      margin-bottom: 1.5rem;
+      color: var(--rosa-profundo);
+    }
+    .programa-nombre {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--negro);
+      margin-bottom: 0.8rem;
+    }
+    .programa-dolor {
+      font-size: 0.92rem;
+      color: var(--gris-medio);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .programa-link {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rosa-profundo);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.3s;
+    }
+    .programa-link:hover { gap: 0.8rem; }
+
+    /* ═══════════════════════════════════════════════════════
+       DETALLE — Foto a sangre horizontal
+       ═══════════════════════════════════════════════════════ */
+    .foto-sangre {
+      position: relative;
+      height: 50vh;
+      min-height: 350px;
+      overflow: hidden;
+    }
+    .foto-sangre img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       BOUTIQUE
+       ═══════════════════════════════════════════════════════ */
+    .boutique-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .boutique-img-wrap img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .boutique-texto p {
+      font-size: 1rem;
+      color: var(--gris-medio);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+    .boutique-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+    .boutique-item {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--arena);
+      color: var(--gris-medio);
+      transition: all 0.3s;
+    }
+    .boutique-item:hover {
+      border-color: var(--rosa-profundo);
+      color: var(--rosa-profundo);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       TESTIMONIOS
+       ═══════════════════════════════════════════════════════ */
+    .testimonios { background: var(--crema); }
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .testimonio {
+      background: var(--blanco);
+      padding: 2.5rem 2rem;
+    }
+    .testimonio-estrellas {
+      color: var(--dorado);
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 1.2rem;
+    }
+    .testimonio-texto {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--gris-oscuro);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .testimonio-nombre {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gris-suave);
+    }
+    .testimonio-badge {
+      font-size: 0.6rem;
+      color: var(--gris-suave);
+      margin-top: 0.3rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       CONTACTO
+       ═══════════════════════════════════════════════════════ */
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contacto-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--negro);
+      margin-bottom: 1.5rem;
+    }
+    .contacto-detalle {
+      margin-bottom: 1.2rem;
+    }
+    .contacto-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gris-suave);
+      margin-bottom: 0.3rem;
+    }
+    .contacto-valor {
+      font-size: 1rem;
+      color: var(--gris-oscuro);
+    }
+    .contacto-valor a {
+      color: var(--rosa-profundo);
+      transition: color 0.3s;
+    }
+    .contacto-valor a:hover { color: var(--rosa-suave); }
+    .contacto-mapa {
+      width: 100%;
+      height: 380px;
+      background: var(--arena);
+      border: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ */
+    .footer {
+      background: var(--negro);
+      padding: 3rem 2rem;
+    }
+    .footer-inner {
+      max-width: var(--max-ancho);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--blanco);
+      font-weight: 400;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .footer-links a {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gris-suave);
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--blanco); }
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--gris-suave);
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       WHATSAPP FLOTANTE
+       ═══════════════════════════════════════════════════════ */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 90;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+      transition: transform 0.3s;
+    }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+    .whatsapp-btn svg { width: 28px; height: 28px; fill: white; }
+
+    /* ═══════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .menu-toggle { display: block; }
+      
+      .filosofia-grid,
+      .concepto-content,
+      .boutique-grid,
+      .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .programas-grid,
+      .testimonios-grid {
+        grid-template-columns: 1fr;
+      }
+      .concepto-pilares {
+        grid-template-columns: 1fr 1fr;
+      }
+      .filosofia-img-wrap img {
+        height: 400px;
+      }
+      .hero h1 { max-width: 100%; }
+      .hero-content { padding-bottom: 4rem; }
+    }
+
+    @media (max-width: 600px) {
+      .concepto-pilares { grid-template-columns: 1fr; }
+      .barra-datos-inner { flex-direction: column; gap: 1.5rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="header" id="header">
+    <a href="/" class="logo">Mujer 360<span>°</span></a>
+    <nav>
+      <a href="#filosofia" class="nav-link">Filosofía</a>
+      <a href="#programas" class="nav-link">Programas</a>
+      <a href="#boutique" class="nav-link">Boutique</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+      <a href="tel:+34620022456" class="nav-cta">Llámanos</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ════════════════ HERO ════════════════ -->
+  <section class="hero">
+    <img src="img/hero/coral-cabina-facial.jpg" alt="Coral López realizando un tratamiento facial en cabina" class="hero-img" loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Centro de estética integral · Parla, Madrid</span>
+      <h1>Esto no es un salón de belleza.<br><em>Es una transformación de verdad.</em></h1>
+      <p class="hero-sub">Un diagnóstico. Un plan real. Tu piel, tu cuerpo, tu bienestar. Todo conectado. Todo personalizado. Todo en un mismo lugar.</p>
+      <a href="#programas" class="hero-cta">
+        Descubre nuestros programas
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════ BARRA DE DATOS ════════════════ -->
+  <div class="barra-datos">
+    <div class="barra-datos-inner">
+      <div class="dato">
+        <div class="dato-numero">35</div>
+        <div class="dato-texto">Años de experiencia</div>
+      </div>
+      <div class="dato">
+        <div class="dato-numero">★ 5.0</div>
+        <div class="dato-texto">Reseñas en Google</div>
+      </div>
+      <div class="dato">
+        <div class="dato-numero">360°</div>
+        <div class="dato-texto">Enfoque integral</div>
+      </div>
+      <div class="dato">
+        <div class="dato-numero">+600</div>
+        <div class="dato-texto">Clientas que confían en nosotras</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════ FILOSOFÍA ════════════════ -->
+  <section class="seccion" id="filosofia">
+    <div class="seccion-inner filosofia-grid">
+      <div class="filosofia-texto">
+        <span class="seccion-eyebrow">Nuestra filosofía</span>
+        <h2 class="seccion-titulo">Llevamos 35 años <em>escuchando a la mujer.</em></h2>
+        <p>Cuando abres la puerta de nuestro centro, no entras a un sitio donde te hacen un tratamiento y te vas. Entras a un lugar donde alguien se sienta contigo, te mira y te pregunta: ¿qué necesitas de verdad?</p>
+        <p>Cada piel cuenta una historia. Cada cuerpo lleva su propio ritmo. Nosotras no trabajamos con protocolos genéricos — trabajamos contigo. Con lo que tú necesitas, ahora, hoy.</p>
+        <p>Eso es Mujer 360°. No una lista de tratamientos. Una forma de entender la estética.</p>
+        <div class="filosofia-firma">— Coral López, fundadora</div>
+      </div>
+      <div class="filosofia-img-wrap">
+        <img src="img/ambiente/coral-filosofia.png" alt="Coral López, fundadora de Mujer 360 Grados" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ CONCEPTO 360 ════════════════ -->
+  <section class="concepto" id="concepto">
+    <img src="img/hero/ambiente-centro.jpg" alt="Interior del centro Mujer 360 Grados" class="concepto-img" loading="lazy">
+    <div class="concepto-content">
+      <div class="concepto-texto">
+        <span class="seccion-eyebrow">El concepto</span>
+        <h2 class="seccion-titulo">Todo en un <em>mismo lugar.</em></h2>
+        <p>No necesitas ir a cuatro sitios distintos para cuidarte. Aquí conectamos cada parte de tu bienestar — rostro, cuerpo, nutrición, imagen — en un plan que tiene sentido completo.</p>
+      </div>
+      <div class="concepto-pilares">
+        <div class="pilar">
+          <div class="pilar-nombre">Cabinas</div>
+          <div class="pilar-desc">Tratamientos faciales y corporales con tecnología avanzada</div>
+        </div>
+        <div class="pilar">
+          <div class="pilar-nombre">Nutrición</div>
+          <div class="pilar-desc">Nutrición y control de peso con seguimiento real</div>
+        </div>
+        <div class="pilar">
+          <div class="pilar-nombre">Boutique</div>
+          <div class="pilar-desc">Cosmética profesional, complementos y accesorios</div>
+        </div>
+        <div class="pilar">
+          <div class="pilar-nombre">Talleres</div>
+          <div class="pilar-desc">Skincare, bienestar y automaquillaje</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ PROGRAMAS ════════════════ -->
+  <section class="seccion programas" id="programas">
+    <div class="seccion-inner">
+      <span class="seccion-eyebrow">Programas Reset Woman 360</span>
+      <h2 class="seccion-titulo">¿Qué necesita <em>tu piel hoy?</em></h2>
+      <div class="programas-grid">
+
+        <div class="programa-card">
+          <svg class="programa-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M3 21c0-4.4 3.6-8 8-8h2c4.4 0 8 3.6 8 8"/></svg>
+          <h3 class="programa-nombre">Reset Facial</h3>
+          <p class="programa-dolor">Tu piel ha perdido luminosidad. Notas manchas que antes no estaban. Quieres mirarte al espejo y reconocerte.</p>
+          <a href="/facial" class="programa-link">
+            Descubrir programa
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="programa-card">
+          <svg class="programa-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+          <h3 class="programa-nombre">Reset Corporal</h3>
+          <p class="programa-dolor">La retención, la celulitis, el volumen que no se va. Has probado cosas y nada funciona. Necesitas un plan real.</p>
+          <a href="/corporal" class="programa-link">
+            Descubrir programa
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="programa-card">
+          <svg class="programa-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+          <h3 class="programa-nombre">Ritual de Bienestar</h3>
+          <p class="programa-dolor">No vienes a arreglar nada. Vienes a soltar, a desconectar. Tu cuerpo lo pide y tú lo mereces.</p>
+          <a href="#contacto" class="programa-link">
+            Reservar
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOTO DETALLE A SANGRE ════════════════ -->
+  <div class="foto-sangre">
+    <img src="img/ambiente/manos-coral-trabajando.jpg" alt="Detalle de las manos de Coral López durante un tratamiento facial" loading="lazy">
+  </div>
+
+  <!-- ════════════════ BOUTIQUE ════════════════ -->
+  <section class="seccion" id="boutique">
+    <div class="seccion-inner boutique-grid">
+      <div class="boutique-img-wrap">
+        <img src="img/hero/boutique-completa.jpg" alt="Boutique de cosmética y complementos de Mujer 360 Grados" loading="lazy">
+      </div>
+      <div class="boutique-texto">
+        <span class="seccion-eyebrow">La boutique</span>
+        <h2 class="seccion-titulo">Tu espacio <em>para completar tu cuidado.</em></h2>
+        <p>No es solo un rincón de productos. Es una selección pensada, probada y recomendada por Coral. Cosmética profesional que usamos en cabina, complementos de moda con personalidad, y accesorios que te hacen sentir bien cada día.</p>
+        <p>Porque cuidarte no termina cuando sales del centro.</p>
+        <div class="boutique-items">
+          <span class="boutique-item">Cosmética facial</span>
+          <span class="boutique-item">Cosmética corporal</span>
+          <span class="boutique-item">Maquillaje</span>
+          <span class="boutique-item">Complementos moda</span>
+          <span class="boutique-item">Accesorios cabello</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOTO DETALLE A SANGRE ════════════════ -->
+  <div class="foto-sangre">
+    <img src="img/ambiente/clienta-tratamiento.jpg" alt="Clienta durante tratamiento facial con tecnología avanzada" loading="lazy">
+  </div>
+
+  <!-- ════════════════ TESTIMONIOS ════════════════ -->
+  <section class="seccion testimonios" id="testimonios">
+    <div class="seccion-inner">
+      <span class="seccion-eyebrow">Lo que dicen nuestras clientas</span>
+      <h2 class="seccion-titulo">Resultados reales. <em>Palabras reales.</em></h2>
+      <div class="testimonios-grid">
+
+        <div class="testimonio">
+          <div class="testimonio-estrellas">★★★★★</div>
+          <p class="testimonio-texto">Llevo años confiando en Coral. No es solo lo que hace con mi piel, es cómo me hace sentir cada vez que voy. Sales de ahí otra persona.</p>
+          <div class="testimonio-nombre">Reseña verificada en Google</div>
+          <div class="testimonio-badge">Local Guide</div>
+        </div>
+
+        <div class="testimonio">
+          <div class="testimonio-estrellas">★★★★★</div>
+          <p class="testimonio-texto">El diagnóstico que me hizo Coral fue lo que más me impresionó. Nadie me había explicado así lo que mi piel necesitaba. Profesionalidad absoluta.</p>
+          <div class="testimonio-nombre">Reseña verificada en Google</div>
+        </div>
+
+        <div class="testimonio">
+          <div class="testimonio-estrellas">★★★★★</div>
+          <p class="testimonio-texto">Lo mejor es que no te venden lo que no necesitas. Te escuchan, te asesoran y los resultados se notan. Repetiré siempre.</p>
+          <div class="testimonio-nombre">Reseña verificada en Google</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ CONTACTO ════════════════ -->
+  <section class="seccion" id="contacto">
+    <div class="seccion-inner contacto-grid">
+      <div class="contacto-info">
+        <span class="seccion-eyebrow">Visítanos</span>
+        <h3>Estamos en Parla, Madrid</h3>
+        
+        <div class="contacto-detalle">
+          <div class="contacto-label">Dirección</div>
+          <div class="contacto-valor">Calle San Roque, 49 — 28982 Parla, Madrid</div>
+        </div>
+        <div class="contacto-detalle">
+          <div class="contacto-label">Teléfono</div>
+          <div class="contacto-valor"><a href="tel:+34620022456">620 02 24 56</a></div>
+        </div>
+        <div class="contacto-detalle">
+          <div class="contacto-label">Horario</div>
+          <div class="contacto-valor">Lunes a viernes: 10:00 – 14:00 · 16:00 – 20:00</div>
+        </div>
+        <div class="contacto-detalle">
+          <div class="contacto-label">WhatsApp</div>
+          <div class="contacto-valor"><a href="https://wa.me/34620022456?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20información" target="_blank" rel="noopener">Escríbenos por WhatsApp →</a></div>
+        </div>
+      </div>
+      <div>
+        <iframe class="contacto-mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.5!2d-3.7678!3d40.2381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4220c2d4c1d9f5%3A0x8e7e8a7c7c7c7c7c!2sCalle%20San%20Roque%2C%2049%2C%2028982%20Parla%2C%20Madrid!5e0!3m2!1ses!2ses!4v1" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Mujer 360°</div>
+      <div class="footer-links">
+        <a href="/aviso-legal">Aviso Legal</a>
+        <a href="/politica-privacidad">Privacidad</a>
+        <a href="/politica-cookies">Cookies</a>
+        <a href="https://www.instagram.com/mujer__360/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-copy">
+        © 2026 Corporación Vital Salud y Belleza S.L. · CIF B85444040 · Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════ WHATSAPP FLOTANTE ════════════════ -->
+  <a href="https://wa.me/34620022456?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20información" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.11.547 4.093 1.504 5.82L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.906 0-3.732-.51-5.33-1.475l-.382-.227-3.963 1.04 1.057-3.862-.25-.397A9.788 9.788 0 012.182 12 9.818 9.818 0 0112 2.182 9.818 9.818 0 0121.818 12 9.818 9.818 0 0112 21.818z"/></svg>
+  </a>
+
+  <!-- ════════════════ SCRIPTS ════════════════ -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Fade in on scroll (intersection observer)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.programa-card, .testimonio, .pilar').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
