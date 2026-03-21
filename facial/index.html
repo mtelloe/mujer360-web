@@ -317,9 +317,79 @@ nav {
   color: rgba(255,255,255,0.35); font-size: 0.9rem;
 }
 
+/* ── CARRUSEL RESULTADOS ── */
+.resultados { padding: 100px 80px; background: var(--white); overflow: hidden; }
+.carrusel-wrap { position: relative; margin-top: 56px; }
+.carrusel-track {
+  display: flex; gap: 20px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.carrusel-slide {
+  flex-shrink: 0;
+  width: calc(33.333% - 14px);
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--cream-deep);
+}
+.carrusel-slide img {
+  width: 100%; height: 380px;
+  object-fit: cover; display: block;
+  transition: transform 0.4s ease;
+}
+.carrusel-slide:hover img { transform: scale(1.03); }
+.carrusel-slide-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 20px 20px 16px;
+  background: linear-gradient(to top, rgba(42,33,24,0.65) 0%, transparent 100%);
+}
+.carrusel-slide-tag {
+  font-family: var(--sans); font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--rose); background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  padding: 4px 10px; display: inline-block; margin-bottom: 6px;
+}
+.carrusel-slide-caption {
+  font-family: var(--serif); font-style: italic; font-size: 0.9rem;
+  color: rgba(255,255,255,0.9); line-height: 1.4;
+}
+.carrusel-nav {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; margin-top: 32px;
+}
+.carrusel-btn {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--white);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s; font-size: 1rem; color: var(--text-mid);
+}
+.carrusel-btn:hover { background: var(--text); color: var(--white); border-color: var(--text); }
+.carrusel-dots { display: flex; gap: 8px; }
+.carrusel-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--border); transition: background 0.25s, transform 0.25s;
+  cursor: pointer;
+}
+.carrusel-dot.active { background: var(--rose); transform: scale(1.4); }
+
 /* ── TESTIMONIOS ── */
 .testimonios { padding: 100px 80px; background: var(--cream-deep); border-top: 1px solid var(--border); }
-.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
+.testi-featured {
+  background: var(--white); border: 1px solid var(--border);
+  padding: 56px 64px; margin-bottom: 24px;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 40px; align-items: end;
+}
+.testi-featured-quote { max-width: 700px; }
+.testi-featured-text {
+  font-family: var(--serif); font-style: italic; font-size: 1.35rem;
+  font-weight: 300; color: var(--text); line-height: 1.6; margin-top: 16px;
+}
+.testi-featured-author { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+.testi-featured-line { width: 1px; height: 48px; background: var(--gold); }
+.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); }
 .testi {
   background: var(--white); padding: 44px 36px;
   position: relative; transition: background .25s;
@@ -331,10 +401,7 @@ nav {
   font-family: var(--serif); font-size: 5rem; color: var(--rose-light);
   line-height: 1;
 }
-.testi-stars {
-  font-size: 0.7rem; letter-spacing: 3px; color: var(--gold);
-  margin-bottom: 20px; display: block;
-}
+.testi-stars { font-size: 0.7rem; letter-spacing: 3px; color: var(--gold); margin-bottom: 20px; display: block; }
 .testi-text {
   font-family: var(--serif); font-style: italic; font-size: 1.05rem;
   color: var(--text); line-height: 1.65; margin-bottom: 28px;
@@ -575,6 +642,75 @@ footer {
   </div>
 </section>
 
+<!-- CARRUSEL RESULTADOS -->
+<section class="resultados">
+  <div class="sh reveal">
+    <span class="sh-tag">Resultados reales</span>
+    <h2 class="sh-h2">Lo que consiguen<br>las clientas de <em>Mujer 360</em></h2>
+    <p class="sh-sub">Antes y después reales, sin filtros. Cada imagen es una clienta del centro.</p>
+  </div>
+
+  <div class="carrusel-wrap">
+    <div class="carrusel-track" id="carruselTrack">
+
+      <div class="carrusel-slide">
+        <img src="/img/resultados/resultado-1.jpg" alt="Resultado facial antes y después — cuello y mandíbula">
+        <div class="carrusel-slide-label">
+          <span class="carrusel-slide-tag">Antes · Después</span>
+          <p class="carrusel-slide-caption">Cuello y mandíbula — firmeza y textura</p>
+        </div>
+      </div>
+
+      <div class="carrusel-slide">
+        <img src="/img/resultados/resultado-2.jpg" alt="Resultado facial antes y después — frente y arrugas">
+        <div class="carrusel-slide-label">
+          <span class="carrusel-slide-tag">Antes · Después</span>
+          <p class="carrusel-slide-caption">Frente — reducción visible de arrugas</p>
+        </div>
+      </div>
+
+      <div class="carrusel-slide">
+        <img src="/img/resultados/resultado-3.jpg" alt="Resultado facial antes y después — contorno ocular">
+        <div class="carrusel-slide-label">
+          <span class="carrusel-slide-tag">Antes · Después</span>
+          <p class="carrusel-slide-caption">Contorno ocular — luminosidad y firmeza</p>
+        </div>
+      </div>
+
+      <div class="carrusel-slide">
+        <img src="/img/resultados/resultado-4.jpg" alt="Resultado facial antes y después — rostro completo">
+        <div class="carrusel-slide-label">
+          <span class="carrusel-slide-tag">Antes · Después</span>
+          <p class="carrusel-slide-caption">Rostro completo — calidad y luminosidad</p>
+        </div>
+      </div>
+
+      <div class="carrusel-slide">
+        <img src="/img/resultados/resultado-5.jpg" alt="Resultado facial antes y después — textura general">
+        <div class="carrusel-slide-label">
+          <span class="carrusel-slide-tag">Antes · Después</span>
+          <p class="carrusel-slide-caption">Textura e hidratación — resultado inmediato</p>
+        </div>
+      </div>
+
+      <div class="carrusel-slide">
+        <img src="/img/resultados/resultado-6.jpg" alt="Resultado facial antes y después — zona ocular">
+        <div class="carrusel-slide-label">
+          <span class="carrusel-slide-tag">Antes · Después</span>
+          <p class="carrusel-slide-caption">Zona ocular — recuperación de la piel</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="carrusel-nav">
+      <button class="carrusel-btn" id="carruselPrev">&#8592;</button>
+      <div class="carrusel-dots" id="carruselDots"></div>
+      <button class="carrusel-btn" id="carruselNext">&#8594;</button>
+    </div>
+  </div>
+</section>
+
 <!-- PARA QUIÉN -->
 <section class="para-quien">
   <div class="pq-visual">
@@ -641,53 +777,49 @@ footer {
   </div>
 </section>
 
-<!-- CORAL -->
-<section class="coral">
-  <div class="coral-content">
-    <div class="sh left">
-      <span class="sh-tag">Quién hay detrás</span>
-      <h2 class="sh-h2">Coral López.<br><em>35 años mirando pieles.</em></h2>
-    </div>
-    <p class="coral-p">El Reset Woman 360 Facial es el resultado de décadas de trabajo en cabina y de una certeza que tengo muy clara: la piel no se cuida comprando más cosas. Se cuida cuando alguien la estudia, entiende qué necesita y aplica el protocolo adecuado en el momento adecuado.</p>
-    <p class="coral-p">Por eso empezamos siempre con diagnóstico. No porque sea un paso del protocolo, sino porque sin saber qué está pasando en tu piel, cualquier tratamiento es una suposición.</p>
-    <p class="coral-p">La radiofrecuencia lleva décadas siendo mi herramienta principal porque trabaja donde la piel lo necesita: en las capas profundas, estimulando colágeno real. El resto del protocolo lo construí para que cada técnica prepare o potencie la siguiente.</p>
-    <div class="coral-sig">
-      <div class="coral-avatar">C</div>
-      <div>
-        <p class="coral-name">Coral López</p>
-        <p class="coral-role">Fundadora · Mujer 360 Grados · Parla, Madrid</p>
-      </div>
-    </div>
-  </div>
-  <div class="coral-visual">
-    <!-- FOTO DE CORAL AQUÍ -->
-  </div>
-</section>
+
 
 <!-- TESTIMONIOS -->
 <section class="testimonios">
   <div class="sh reveal">
     <span class="sh-tag">Clientas reales</span>
-    <h2 class="sh-h2">Lo que dicen después<br>del <em>Reset Woman 360 Facial</em></h2>
+    <h2 class="sh-h2">Lo que cambia después<br>del <em>Reset Woman 360 Facial</em></h2>
+    <p class="sh-sub">No son promesas. Son las palabras de mujeres que ya lo han vivido.</p>
   </div>
+
+  <!-- TESTIMONIO DESTACADO -->
+  <div class="testi-featured reveal">
+    <div class="testi-featured-quote">
+      <span class="testi-stars">★★★★★</span>
+      <p class="testi-featured-text">"Llevaba años pensando que mi piel ya era así y punto. Que con la edad se apaga y ya no hay nada que hacer. Después del diagnóstico entendí que no era la edad — era que nadie había trabajado mi piel de verdad. Salí con una luminosidad que no recordaba tener desde hace diez años."</p>
+    </div>
+    <div class="testi-featured-author">
+      <div class="testi-featured-line"></div>
+      <div>
+        <p class="testi-name">M. L.</p>
+        <p class="testi-detail">Parla · 54 años · Reset Woman 360 Facial</p>
+      </div>
+    </div>
+  </div>
+
   <div class="testi-grid">
     <div class="testi reveal">
       <span class="testi-stars">★★★★★</span>
-      <p class="testi-text">"Nunca había hecho un diagnóstico así. Ver en pantalla exactamente qué tenía mi piel y por qué fue un antes y un después. Salí entendiendo mi piel por primera vez."</p>
-      <div class="testi-line"></div>
-      <p class="testi-name">M. L.</p>
-      <p class="testi-detail">Parla · Reset Woman 360 Facial</p>
-    </div>
-    <div class="testi reveal">
-      <span class="testi-stars">★★★★★</span>
-      <p class="testi-text">"La diferencia era tan visible que mis compañeras me preguntaron si me había ido de vacaciones. Era la piel, no las vacaciones."</p>
+      <p class="testi-text">"Mis compañeras de trabajo me preguntaron si me había ido de vacaciones. Era la piel, no las vacaciones. Nunca había tenido esa sensación después de un tratamiento."</p>
       <div class="testi-line"></div>
       <p class="testi-name">A. G.</p>
       <p class="testi-detail">Getafe · 48 años</p>
     </div>
     <div class="testi reveal">
       <span class="testi-stars">★★★★★</span>
-      <p class="testi-text">"Lo que más valoro es que Coral no te vende lo que no necesitas. Te dice exactamente lo que tiene tu piel y trabaja con eso. Se nota que lleva décadas haciéndolo."</p>
+      <p class="testi-text">"El diagnóstico con IA fue lo que más me sorprendió. Ver en pantalla lo que tenía mi piel y por qué — con datos reales — es algo que no había vivido en ningún otro sitio."</p>
+      <div class="testi-line"></div>
+      <p class="testi-name">C. V.</p>
+      <p class="testi-detail">Parla · 51 años</p>
+    </div>
+    <div class="testi reveal">
+      <span class="testi-stars">★★★★★</span>
+      <p class="testi-text">"Había probado de todo. Cremas caras, tratamientos sueltos... nada. Aquí es diferente porque hay un método detrás. No es una sesión — es un protocolo pensado."</p>
       <div class="testi-line"></div>
       <p class="testi-name">R. M.</p>
       <p class="testi-detail">Pinto · 61 años · Clienta habitual</p>
@@ -764,6 +896,38 @@ footer {
 </footer>
 
 <script>
+  // CARRUSEL
+  const track = document.getElementById('carruselTrack');
+  const slides = track.querySelectorAll('.carrusel-slide');
+  const dotsWrap = document.getElementById('carruselDots');
+  let current = 0;
+  const visible = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+  const total = slides.length;
+  const maxIdx = total - visible;
+
+  // Crear dots
+  for (let i = 0; i <= maxIdx; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'carrusel-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsWrap.appendChild(dot);
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, maxIdx));
+    const slideW = slides[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${current * slideW}px)`;
+    dotsWrap.querySelectorAll('.carrusel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  document.getElementById('carruselPrev').onclick = () => goTo(current - 1);
+  document.getElementById('carruselNext').onclick = () => goTo(current + 1);
+
+  // Autoplay
+  setInterval(() => goTo(current >= maxIdx ? 0 : current + 1), 4000);
+
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
