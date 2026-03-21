@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reset Woman Facial | Mujer 360 Grados — Parla, Madrid</title>
+<meta name="description" content="Diagnóstico avanzado con IA + protocolo completo de regeneración facial. Piel más luminosa, hidratada y revitalizada desde la primera sesión. Parla, Madrid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --white:       #ffffff;
+  --off-white:   #FAFAFA;
+  --border:      #EBEBEB;
+  --border-soft: #F2F2F2;
+  --text:        #1A1A1A;
+  --text-mid:    #4A4A4A;
+  --text-soft:   #9A9A9A;
+  --pink:        #E03E8A;   /* fucsia corporativo */
+  --pink-dark:   #C02B74;
+  --pink-light:  #FCE8F3;
+  --pink-pale:   #FDF4F9;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ────────── NAV ────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 66px; padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { font-family: var(--serif); font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: 0.01em; }
+.nav-logo span { color: var(--pink); }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { font-size: 0.84rem; color: var(--text-mid); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-btn {
+  background: var(--pink) !important;
+  color: #fff !important;
+  padding: 10px 24px;
+  border-radius: 2px;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  transition: background .2s !important;
+}
+.nav-btn:hover { background: var(--pink-dark) !important; }
+
+/* ────────── HERO ────────── */
+.hero {
+  padding-top: 66px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px 80px;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--pink); margin-bottom: 24px;
+}
+.hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); }
+.hero-h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 4.2vw, 4rem);
+  font-weight: 400; line-height: 1.08; color: var(--text);
+  margin-bottom: 24px;
+}
+.hero-h1 em { font-style: italic; color: var(--pink); }
+.hero-desc {
+  font-size: 1rem; font-weight: 300; color: var(--text-mid);
+  line-height: 1.8; max-width: 430px; margin-bottom: 44px;
+}
+.hero-btns { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.btn-pink {
+  background: var(--pink); color: #fff;
+  padding: 14px 32px; font-size: 0.85rem; font-weight: 500;
+  border-radius: 2px; text-decoration: none;
+  transition: background .25s, transform .2s; display: inline-block;
+}
+.btn-pink:hover { background: var(--pink-dark); transform: translateY(-1px); }
+.btn-outline {
+  font-size: 0.84rem; color: var(--text-mid); text-decoration: none;
+  border-bottom: 1px solid var(--border); padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
+}
+.btn-outline:hover { color: var(--pink); border-color: var(--pink); }
+
+.hero-stats {
+  margin-top: 52px; padding-top: 36px; border-top: 1px solid var(--border);
+  display: flex; gap: 44px;
+}
+.hero-stat-num {
+  font-family: var(--serif); font-size: 2rem; font-style: italic;
+  color: var(--text); line-height: 1; display: block;
+}
+.hero-stat-label { font-size: 0.73rem; color: var(--text-soft); margin-top: 4px; display: block; }
+
+.hero-right { position: relative; overflow: hidden; background: #1a1a1a; }
+.hero-video-wrap {
+  position: relative; width: 100%; height: 100%; min-height: 580px;
+  overflow: hidden;
+}
+.hero-video-wrap::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none; z-index: 1;
+}
+.hero-video-wrap iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 177.78vh; /* 16:9 ratio */
+  height: 100%;
+  min-width: 100%;
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%);
+  border: none;
+  pointer-events: none;
+}
+.hero-img {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; align-items: flex-end; padding: 36px;
+}
+.hero-quote {
+  background: #fff; border-left: 3px solid var(--pink);
+  padding: 18px 22px; max-width: 280px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+}
+.hero-quote-text {
+  font-family: var(--serif); font-style: italic; font-size: 0.92rem;
+  color: var(--text); line-height: 1.55; margin-bottom: 10px;
+}
+.hero-quote-author {
+  font-size: 0.7rem; font-weight: 600; color: var(--text-soft);
+  text-transform: uppercase; letter-spacing: .1em;
+}
+
+/* ────────── STRIP ────────── */
+.strip {
+  background: var(--pink); padding: 0 80px;
+  display: flex; align-items: stretch; justify-content: center;
+  overflow: hidden;
+}
+.strip-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 22px 0; flex: 1; justify-content: center;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+.strip-item:last-child { border-right: none; }
+.strip-icon { font-size: 1.2rem; line-height: 1; }
+.strip-text strong { font-size: 0.84rem; font-weight: 600; color: #fff; display: block; }
+.strip-text span { font-size: 0.75rem; color: rgba(255,255,255,0.75); }
+
+/* ────────── SECTION HEADER ────────── */
+.sh { text-align: center; margin-bottom: 52px; }
+.sh-tag {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--pink); margin-bottom: 12px; display: block;
+}
+.sh-h2 {
+  font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 400; line-height: 1.2; color: var(--text);
+}
+.sh-h2 em { font-style: italic; }
+.sh-sub {
+  font-size: .95rem; font-weight: 300; color: var(--text-mid);
+  max-width: 500px; margin: 12px auto 0; line-height: 1.7;
+}
+
+/* ────────── PROTOCOLO ────────── */
+.protocolo { padding: 96px 80px; background: var(--white); }
+.cards-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: var(--border); border: 1px solid var(--border);
+}
+.card {
+  background: var(--white); padding: 38px 34px;
+  transition: background .25s; position: relative;
+}
+.card:hover { background: var(--pink-pale); }
+.card-step {
+  position: absolute; top: 18px; right: 18px;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--pink); background: var(--pink-light);
+  padding: 3px 9px; border-radius: 2px;
+}
+.card-icon {
+  width: 46px; height: 46px; border-radius: 10px;
+  background: var(--pink-light); display: flex; align-items: center;
+  justify-content: center; font-size: 1.25rem; margin-bottom: 22px;
+}
+.card-title {
+  font-family: var(--serif); font-size: 1.15rem;
+  color: var(--text); margin-bottom: 10px; line-height: 1.3;
+}
+.card-body { font-size: 0.84rem; font-weight: 300; color: var(--text-mid); line-height: 1.75; }
+
+/* ────────── PARA QUIÉN ────────── */
+.para-quien {
+  padding: 96px 80px; background: var(--off-white);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+}
+.pq-visual {
+  border-radius: 2px; overflow: hidden;
+  aspect-ratio: 4/5;
+  /* FOTO DE CORAL EN CABINA AQUÍ */
+  background: linear-gradient(145deg, #F5C0DC 0%, #D060A0 50%, #A03070 100%);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 32px;
+  position: relative;
+}
+.pq-visual::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.3) 0%, transparent 50%);
+}
+.pq-label {
+  position: relative; z-index: 1;
+  font-family: var(--serif); font-style: italic; font-size: 1.2rem;
+  color: #fff; line-height: 1.45;
+}
+.pq-content .sh { text-align: left; margin-bottom: 32px; }
+.pq-list { list-style: none; }
+.pq-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px 0; border-bottom: 1px solid var(--border);
+}
+.pq-item:first-child { border-top: 1px solid var(--border); }
+.pq-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--pink-light); flex-shrink: 0; margin-top: 2px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; font-weight: 700; color: var(--pink);
+}
+.pq-text { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+.pq-text strong { font-weight: 600; color: var(--text); display: block; }
+
+/* ────────── PROCESO ────────── */
+.proceso { padding: 96px 80px; background: var(--white); }
+.steps {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 36px; margin-top: 60px; position: relative;
+}
+.steps::before {
+  content: ''; position: absolute; top: 27px; left: 68px; right: 68px;
+  height: 1px; background: var(--border);
+}
+.step { text-align: center; position: relative; z-index: 1; }
+.step-dot {
+  width: 54px; height: 54px; border-radius: 50%;
+  border: 2px solid var(--border); background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-family: var(--serif); font-style: italic; font-size: 1.15rem;
+  color: var(--pink); transition: all .25s;
+}
+.step:hover .step-dot { background: var(--pink-light); border-color: var(--pink); }
+.step-title { font-size: 0.88rem; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.step-body { font-size: 0.8rem; font-weight: 300; color: var(--text-soft); line-height: 1.65; }
+
+/* ────────── TESTIMONIOS ────────── */
+.testimonios { padding: 96px 80px; background: var(--off-white); border-top: 1px solid var(--border); }
+.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 52px; }
+.testi {
+  background: var(--white); border: 1px solid var(--border);
+  padding: 34px; transition: box-shadow .25s;
+}
+.testi:hover { box-shadow: 0 6px 24px rgba(0,0,0,.06); }
+.testi-stars { color: var(--pink); font-size: .72rem; letter-spacing: 2px; margin-bottom: 18px; }
+.testi-text {
+  font-family: var(--serif); font-style: italic; font-size: .98rem;
+  color: var(--text); line-height: 1.65; margin-bottom: 24px;
+}
+.testi-name { font-size: .76rem; font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: .08em; }
+.testi-detail { font-size: .73rem; color: var(--text-soft); margin-top: 2px; }
+
+/* ────────── CORAL ────────── */
+.coral {
+  padding: 96px 80px; background: var(--white);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+}
+.coral-content .sh { text-align: left; margin-bottom: 24px; }
+.coral-p { font-size: .9rem; font-weight: 300; color: var(--text-mid); line-height: 1.85; margin-bottom: 14px; }
+.coral-sig {
+  margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 14px;
+}
+.coral-avatar {
+  width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, #F5C0DC, #C03880);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-style: italic; color: #fff; font-size: 1.1rem;
+}
+.coral-name { font-size: .86rem; font-weight: 600; color: var(--text); }
+.coral-role { font-size: .73rem; color: var(--text-soft); margin-top: 1px; }
+.coral-img {
+  border-radius: 2px; aspect-ratio: 4/5; overflow: hidden;
+  /* FOTO DE CORAL AQUÍ */
+  background: linear-gradient(150deg, #FAD4EB 0%, #E070B0 55%, #B03080 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-style: italic; color: rgba(255,255,255,.4); font-size: .9rem;
+}
+
+/* ────────── FAQ ────────── */
+.faq { padding: 96px 80px; background: var(--off-white); border-top: 1px solid var(--border); }
+.faq-wrap { max-width: 740px; margin: 48px auto 0; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-btn {
+  width: 100%; background: none; border: none; cursor: pointer;
+  padding: 22px 0; display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 16px; text-align: left;
+}
+.faq-q { font-size: .94rem; font-weight: 500; color: var(--text); line-height: 1.4; }
+.faq-ico {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 1.5px solid var(--border); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: var(--text-soft); transition: all .3s; margin-top: 1px;
+}
+.faq-item.open .faq-ico { background: var(--pink); border-color: var(--pink); color: #fff; transform: rotate(45deg); }
+.faq-a {
+  font-size: .86rem; font-weight: 300; color: var(--text-mid);
+  line-height: 1.8; max-height: 0; overflow: hidden;
+  transition: max-height .4s ease, padding-bottom .3s;
+}
+.faq-item.open .faq-a { max-height: 240px; padding-bottom: 22px; }
+
+/* ────────── CTA ────────── */
+.cta { padding: 100px 80px; background: var(--pink); text-align: center; position: relative; overflow: hidden; }
+.cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.cta-inner { max-width: 580px; margin: 0 auto; position: relative; }
+.cta h2 {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 2.9rem); font-weight: 400;
+  color: #fff; line-height: 1.2; margin-bottom: 18px;
+}
+.cta p { font-size: .94rem; font-weight: 300; color: rgba(255,255,255,.8); line-height: 1.75; margin-bottom: 40px; }
+.btn-white {
+  background: #fff; color: var(--pink); padding: 15px 40px;
+  font-size: .85rem; font-weight: 600; border-radius: 2px;
+  text-decoration: none; display: inline-block;
+  transition: all .25s;
+}
+.btn-white:hover { background: var(--text); color: #fff; transform: translateY(-2px); }
+.cta-note { font-size: .72rem; color: rgba(255,255,255,.5); margin-top: 18px; }
+
+/* ────────── FOOTER ────────── */
+footer {
+  background: var(--white); border-top: 1px solid var(--border);
+  padding: 36px 80px; display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 18px;
+}
+.footer-logo { font-family: var(--serif); font-size: 1rem; color: var(--text); text-decoration: none; }
+.footer-logo span { color: var(--pink); }
+.footer-links { display: flex; gap: 26px; flex-wrap: wrap; }
+.footer-links a { font-size: .75rem; color: var(--text-soft); text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--pink); }
+.footer-copy { font-size: .7rem; color: var(--text-soft); opacity: .65; }
+
+/* ────────── REVEAL ────────── */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ────────── RESPONSIVE ────────── */
+@media (max-width: 1024px) {
+  nav { padding: 0 24px; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 68px 36px 52px; order: 2; }
+  .hero-right { min-height: 420px; order: 1; }
+  .hero-img { min-height: 420px; }
+  .strip { padding: 0 24px; flex-wrap: wrap; }
+  .strip-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.2); padding: 18px 0; flex: 1 1 45%; }
+  .protocolo { padding: 68px 36px; }
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+  .para-quien { grid-template-columns: 1fr; padding: 68px 36px; gap: 36px; }
+  .pq-visual { aspect-ratio: 16/7; }
+  .proceso { padding: 68px 36px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .steps::before { display: none; }
+  .testimonios { padding: 68px 36px; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .coral { grid-template-columns: 1fr; padding: 68px 36px; gap: 36px; }
+  .coral-img { aspect-ratio: 16/7; order: -1; }
+  .faq { padding: 68px 36px; }
+  .cta { padding: 68px 36px; }
+  footer { padding: 28px 36px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  nav { padding: 0 20px; }
+  .hero-left { padding: 52px 20px 44px; }
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .strip-item { flex: 1 1 100%; }
+  .protocolo, .para-quien, .proceso, .testimonios, .coral, .faq, .cta { padding: 52px 20px; }
+  .cards-grid, .steps { grid-template-columns: 1fr; }
+  footer { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/index.html" class="nav-logo">Mujer <span>360°</span></a>
+  <div class="nav-links">
+    <a href="/corporal">Reset Corporal</a>
+    <a href="#protocolo">El tratamiento</a>
+    <a href="#preguntas">Preguntas</a>
+    <a href="LINK_KOIBOX_AQUI" class="nav-btn">Reservar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Reset Woman Facial · Parla, Madrid</span>
+    <h1 class="hero-h1">Tu piel,<br><em>renovada</em><br>desde dentro.</h1>
+    <p class="hero-desc">Un protocolo completo con diagnóstico avanzado por IA, radiofrecuencia y terapia LED. Textura, luminosidad y firmeza. Sin cirugía. Sin recuperación.</p>
+    <div class="hero-btns">
+      <a href="LINK_KOIBOX_AQUI" class="btn-pink">Reservar ahora</a>
+      <a href="#protocolo" class="btn-outline">Ver qué incluye</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">35</span>
+        <span class="hero-stat-label">Años de experiencia</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">6</span>
+        <span class="hero-stat-label">Técnicas en un protocolo</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">1ª</span>
+        <span class="hero-stat-label">Sesión con resultados visibles</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/LnfbgjqdcCk?autoplay=1&mute=1&loop=1&playlist=LnfbgjqdcCk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&playsinline=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Reset Woman Facial">
+      </iframe>
+      <div class="hero-img">
+        <div class="hero-quote">
+          <p class="hero-quote-text">"Salí con la piel como si me hubiera tomado unas vacaciones de dos semanas."</p>
+          <p class="hero-quote-author">M.L. — Parla, clienta Reset Facial</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP ROSA -->
+<div class="strip">
+  <div class="strip-item">
+    <span class="strip-icon">🔎</span>
+    <div class="strip-text"><strong>Diagnóstico con IA</strong><span>Análisis real de tu piel</span></div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">⚡</span>
+    <div class="strip-text"><strong>Radiofrecuencia</strong><span>Colágeno y firmeza</span></div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">💡</span>
+    <div class="strip-text"><strong>Terapia LED</strong><span>Regeneración celular</span></div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">✨</span>
+    <div class="strip-text"><strong>Sin recuperación</strong><span>Resultados desde el día 1</span></div>
+  </div>
+</div>
+
+<!-- PROTOCOLO -->
+<section class="protocolo" id="protocolo">
+  <div class="sh reveal">
+    <span class="sh-tag">El protocolo completo</span>
+    <h2 class="sh-h2">Todo lo que incluye<br>el Reset Woman Facial</h2>
+    <p class="sh-sub">Seis técnicas combinadas en un solo tratamiento, diseñadas para actuar en cada capa de la piel.</p>
+  </div>
+  <div class="cards-grid">
+
+    <div class="card reveal">
+      <span class="card-step">Paso 1</span>
+      <div class="card-icon">🔎</div>
+      <h3 class="card-title">Diagnóstico facial con escáner IA</h3>
+      <p class="card-body">Análisis avanzado con inteligencia artificial para evaluar hidratación, textura, manchas y arrugas. Sin suposiciones: todo con datos reales de tu piel.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-icon">🔥</div>
+      <h3 class="card-title">Masaje de espalda con calor terapéutico</h3>
+      <p class="card-body">Libera las tensiones acumuladas y prepara el cuerpo para recibir el tratamiento en el mejor estado posible.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-icon">🍊</div>
+      <h3 class="card-title">Peeling con ácidos frutales</h3>
+      <p class="card-body">Elimina células muertas y activa la regeneración cutánea. La piel queda preparada para absorber al máximo los activos que vienen después.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-icon">⚡</div>
+      <h3 class="card-title">Radiofrecuencia regeneradora</h3>
+      <p class="card-body">Estimula la producción natural de colágeno y elastina desde las capas profundas. Firmeza y calidad de piel de forma progresiva y duradera.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-icon">💧</div>
+      <h3 class="card-title">Cóctel de péptidos</h3>
+      <p class="card-body">Activos altamente concentrados que regeneran, hidratan y revitalizan la piel en profundidad. Los resultados se notan desde la misma sesión.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-icon">💡</div>
+      <h3 class="card-title">Terapia LED rejuvenecedora</h3>
+      <p class="card-body">La luz LED estimula la regeneración celular, mejora la luminosidad y potencia todos los resultados del tratamiento. El brillo final que lo diferencia.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="para-quien">
+  <div class="pq-visual">
+    <!-- FOTO DE CORAL EN CABINA AQUÍ -->
+    <p class="pq-label">"Cada piel tiene su historia.<br>El diagnóstico es el principio."</p>
+  </div>
+  <div class="pq-content">
+    <div class="sh">
+      <span class="sh-tag">¿Es para ti?</span>
+      <h2 class="sh-h2">El Reset Facial<br>es para ti <em>si…</em></h2>
+    </div>
+    <ul class="pq-list">
+      <li class="pq-item reveal">
+        <div class="pq-check">✓</div>
+        <div class="pq-text"><strong>Tu piel está apagada o sin brillo</strong>Nada de lo que usas consigue esa luminosidad real y duradera.</div>
+      </li>
+      <li class="pq-item reveal">
+        <div class="pq-check">✓</div>
+        <div class="pq-text"><strong>Notas pérdida de firmeza o textura irregular</strong>La piel ya no tiene la densidad que tenía y quieres recuperarla sin invasión.</div>
+      </li>
+      <li class="pq-item reveal">
+        <div class="pq-check">✓</div>
+        <div class="pq-text"><strong>Has probado cremas y no ves diferencia real</strong>Llevas tiempo invirtiendo en productos sin conseguir un cambio visible y estable.</div>
+      </li>
+      <li class="pq-item reveal">
+        <div class="pq-check">✓</div>
+        <div class="pq-text"><strong>Quieres saber exactamente qué necesita tu piel</strong>El diagnóstico con IA te lo dice antes de tocar nada. Aquí empieza todo.</div>
+      </li>
+      <li class="pq-item reveal">
+        <div class="pq-check">✓</div>
+        <div class="pq-text"><strong>Buscas resultados sin tiempo de recuperación</strong>Puedes venir en tu hora del día y retomar tu vida inmediatamente después.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="proceso">
+  <div class="sh reveal">
+    <span class="sh-tag">El proceso</span>
+    <h2 class="sh-h2">Cómo es tu visita<br>de principio a fin</h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="step-dot">1</div>
+      <h3 class="step-title">Reservas tu cita</h3>
+      <p class="step-body">Online en cualquier momento. Confirmación inmediata. Lunes a viernes mañana y tarde.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-dot">2</div>
+      <h3 class="step-title">Diagnóstico con IA</h3>
+      <p class="step-body">Entendemos tu piel con datos reales antes de aplicar ninguna técnica.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-dot">3</div>
+      <h3 class="step-title">Protocolo completo</h3>
+      <p class="step-body">Masaje, peeling, radiofrecuencia, péptidos y LED. Cada técnica en su momento.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-dot">4</div>
+      <h3 class="step-title">Resultados visibles</h3>
+      <p class="step-body">Sales con la piel luminosa, hidratada y con esa textura que llevabas buscando.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios">
+  <div class="sh reveal">
+    <span class="sh-tag">Clientas reales</span>
+    <h2 class="sh-h2">Lo que dicen después<br>de su Reset Facial</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Nunca había hecho un diagnóstico así. Ver en pantalla exactamente qué tenía mi piel y por qué fue un antes y un después. Salí entendiendo mi piel por primera vez."</p>
+      <p class="testi-name">M. L.</p>
+      <p class="testi-detail">Parla · Reset Woman Facial</p>
+    </div>
+    <div class="testi reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"La diferencia era tan visible que mis compañeras me preguntaron si me había ido de vacaciones. Era la piel, no las vacaciones."</p>
+      <p class="testi-name">A. G.</p>
+      <p class="testi-detail">Getafe · 48 años</p>
+    </div>
+    <div class="testi reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Lo que más valoro es que Coral no te vende lo que no necesitas. Te dice exactamente lo que tiene tu piel y trabaja con eso. Se nota que lleva décadas haciéndolo."</p>
+      <p class="testi-name">R. M.</p>
+      <p class="testi-detail">Pinto · 61 años · Clienta habitual</p>
+    </div>
+  </div>
+</section>
+
+<!-- CORAL -->
+<section class="coral">
+  <div class="coral-content">
+    <div class="sh">
+      <span class="sh-tag">Quién hay detrás</span>
+      <h2 class="sh-h2">Coral López.<br><em>35 años mirando pieles.</em></h2>
+    </div>
+    <p class="coral-p">El Reset Facial es el resultado de décadas de trabajo en cabina y de una certeza que tengo muy clara: la piel no se cuida comprando más cosas. Se cuida cuando alguien la estudia, entiende qué necesita y aplica el protocolo adecuado en el momento adecuado.</p>
+    <p class="coral-p">Por eso empezamos siempre con diagnóstico. No porque sea un paso del protocolo, sino porque sin saber qué está pasando en tu piel, cualquier tratamiento es una suposición.</p>
+    <p class="coral-p">La radiofrecuencia lleva décadas siendo mi herramienta principal porque trabaja donde la piel lo necesita: en las capas profundas, estimulando colágeno real. El resto del protocolo lo construí para que cada técnica prepare o potencie la siguiente.</p>
+    <div class="coral-sig">
+      <div class="coral-avatar">C</div>
+      <div>
+        <p class="coral-name">Coral López</p>
+        <p class="coral-role">Fundadora · Mujer 360 Grados · Parla, Madrid</p>
+      </div>
+    </div>
+  </div>
+  <div class="coral-img">
+    <!-- FOTO DE CORAL AQUÍ -->
+    Foto de Coral
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="preguntas">
+  <div class="sh reveal">
+    <span class="sh-tag">Preguntas frecuentes</span>
+    <h2 class="sh-h2">Lo que suelen<br>preguntarme antes de venir</h2>
+  </div>
+  <div class="faq-wrap">
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        <span class="faq-q">¿Cuánto dura el tratamiento?</span>
+        <span class="faq-ico">+</span>
+      </button>
+      <div class="faq-a">Aproximadamente 90 minutos. Incluye diagnóstico con IA, masaje de espalda, peeling, radiofrecuencia, cóctel de péptidos y terapia LED. Una sesión completa, no un tratamiento exprés.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        <span class="faq-q">¿Hay tiempo de recuperación?</span>
+        <span class="faq-ico">+</span>
+      </button>
+      <div class="faq-a">No. Puedes venir en tu hora de comida y retomar el día sin problema. Puede haber una ligera rojez puntual tras el peeling que desaparece en pocas horas. Solo recomendamos protector solar después, como siempre.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        <span class="faq-q">¿Funciona con piel sensible?</span>
+        <span class="faq-ico">+</span>
+      </button>
+      <div class="faq-a">Sí. Adaptamos el protocolo al tipo de piel que tienes. Por eso es tan importante el diagnóstico inicial: para no aplicar nada que no le convenga a tu piel concreta.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        <span class="faq-q">¿Con cuántas sesiones se ven resultados?</span>
+        <span class="faq-ico">+</span>
+      </button>
+      <div class="faq-a">Desde la primera sesión notarás diferencia en luminosidad e hidratación. Para resultados estructurales —firmeza, textura, uniformidad— trabajamos con programas de sesiones que diseñamos según el diagnóstico.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        <span class="faq-q">¿Dónde estáis y cuáles son los horarios?</span>
+        <span class="faq-ico">+</span>
+      </button>
+      <div class="faq-a">Estamos en Calle San Roque 49, Parla (Madrid). Atendemos de lunes a viernes de 10h a 14h y de 16h a 20h. Puedes reservar desde esta página en cualquier momento.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>Tu piel está esperando<br>que alguien la trabaje bien.</h2>
+    <p>Reserva tu sesión Reset Woman Facial. Empezamos con el diagnóstico, terminamos con resultados visibles desde el primer día.</p>
+    <a href="LINK_KOIBOX_AQUI" class="btn-white">Reservar mi sesión</a>
+    <p class="cta-note">Parla, Madrid · Lunes a viernes · 10h–14h y 16h–20h</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/index.html" class="footer-logo">Mujer <span>360°</span></a>
+  <div class="footer-links">
+    <a href="/index.html">Inicio</a>
+    <a href="/corporal">Reset Corporal</a>
+    <a href="LINK_KOIBOX_AQUI">Reservas</a>
+    <a href="/politica-de-privacidad.html">Privacidad</a>
+    <a href="/aviso-legal.html">Aviso Legal</a>
+  </div>
+  <p class="footer-copy">© 2026 Mujer 360 Grados S.L. · CIF B13964101 · Parla, Madrid</p>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    const siblings = Array.from(el.parentElement.querySelectorAll('.reveal'));
+    el.style.transitionDelay = `${siblings.indexOf(el) * 0.07}s`;
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
