@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Mujer 360° · Área Privada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Manrope', 'Helvetica Neue', sans-serif;
+      --blanco: #FFFFFF;
+      --crema: #F4F0EF;
+      --rosa-palido: #F8F0EE;
+      --rosegold: #C4A882;
+      --texto: #303030;
+      --texto-sec: #7A7A7A;
+      --texto-claro: #A09790;
+      --borde: #E8E4E2;
+      --btn-bg: #303030;
+      --vip: #8B6E4E;
+    }
+    body {
+      font-family: var(--sans); color: var(--texto);
+      background: var(--crema); line-height: 1.7; font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    .inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    /* Nav */
+    .nav {
+      background: var(--blanco); border-bottom: 1px solid var(--borde);
+      padding: 1rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: var(--serif); font-size: 1.5rem; }
+    .nav-logo span { color: var(--rosegold); }
+    .nav-user {
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .nav-user-name {
+      font-size: 0.78rem; font-weight: 500; color: var(--texto-sec);
+    }
+    .nav-back {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--texto-sec);
+    }
+
+    /* Login view */
+    .login-wrap {
+      min-height: calc(100vh - 60px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .login-card {
+      background: var(--blanco); padding: 3rem;
+      max-width: 420px; width: 100%;
+      border: 1px solid var(--borde);
+    }
+    .login-card h2 {
+      font-family: var(--serif);
+      font-size: 1.8rem; font-weight: 300;
+      margin-bottom: 0.3rem;
+    }
+    .login-card .sub {
+      font-size: 0.85rem; color: var(--texto-sec);
+      margin-bottom: 2rem; font-weight: 300;
+    }
+    .form-group { margin-bottom: 1.3rem; }
+    .form-label {
+      display: block; font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--texto-sec); margin-bottom: 0.4rem;
+    }
+    .form-input {
+      width: 100%; padding: 0.8rem 1rem;
+      font-family: var(--sans); font-size: 0.9rem;
+      border: 1px solid var(--borde); background: var(--blanco);
+      color: var(--texto); outline: none; transition: border-color 0.3s;
+    }
+    .form-input:focus { border-color: var(--rosegold); }
+    .form-btn {
+      width: 100%; padding: 0.9rem;
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--blanco); background: var(--btn-bg);
+      border: 1px solid var(--btn-bg); cursor: pointer;
+      transition: all 0.3s;
+    }
+    .form-btn:hover { background: transparent; color: var(--texto); }
+    .login-register {
+      margin-top: 1.5rem; text-align: center;
+      font-size: 0.82rem; color: var(--texto-sec);
+    }
+    .login-register a {
+      color: var(--texto); font-weight: 500;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    /* Dashboard view */
+    .dashboard { display: none; padding: 3rem 0; }
+    .dashboard.active { display: block; }
+    .login-wrap.hidden { display: none; }
+
+    .dash-header {
+      text-align: center; padding: 2rem 0 3rem;
+    }
+    .dash-header .eyebrow {
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rosegold); margin-bottom: 0.5rem;
+    }
+    .dash-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 300;
+    }
+    .dash-header h1 em { font-style: italic; }
+    .dash-header p {
+      font-size: 0.9rem; color: var(--texto-sec);
+      font-weight: 300; margin-top: 0.5rem;
+    }
+
+    /* Sections */
+    .dash-section {
+      margin-bottom: 3rem;
+    }
+    .dash-section-title {
+      font-family: var(--serif);
+      font-size: 1.5rem; font-weight: 300;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--borde);
+    }
+    .dash-section-title em { font-style: italic; }
+
+    /* Product grid */
+    .product-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+    .product-card {
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-3px); }
+    .product-name {
+      font-family: var(--serif);
+      font-size: 1.1rem; font-weight: 400;
+      margin-bottom: 0.3rem;
+    }
+    .product-desc {
+      font-size: 0.8rem; color: var(--texto-sec);
+      font-weight: 300; margin-bottom: 1rem; line-height: 1.6;
+    }
+    .product-prices {
+      display: flex; align-items: baseline; gap: 0.8rem;
+    }
+    .price-original {
+      font-size: 0.85rem; color: var(--texto-claro);
+      text-decoration: line-through;
+    }
+    .price-vip {
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--vip);
+    }
+    .vip-badge {
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--vip); background: rgba(139,110,78,0.1);
+      padding: 0.2rem 0.5rem; margin-left: 0.3rem;
+    }
+    .product-btn {
+      display: block; width: 100%; margin-top: 1rem;
+      padding: 0.6rem; text-align: center;
+      font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--texto); border: 1px solid var(--borde);
+      background: transparent; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .product-btn:hover { background: var(--texto); color: var(--blanco); }
+
+    /* Content cards */
+    .content-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+    .content-card {
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      padding: 2rem;
+    }
+    .content-tag {
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--rosegold); margin-bottom: 0.5rem;
+    }
+    .content-title {
+      font-family: var(--serif);
+      font-size: 1.15rem; font-weight: 400;
+      margin-bottom: 0.4rem;
+    }
+    .content-excerpt {
+      font-size: 0.82rem; color: var(--texto-sec);
+      font-weight: 300; line-height: 1.6;
+    }
+    .content-link {
+      display: inline-block; margin-top: 0.8rem;
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--rosegold); border-bottom: 1px solid var(--rosegold);
+      padding-bottom: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .content-grid { grid-template-columns: 1fr; }
+      .login-card { margin: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Mujer 360<span>°</span></a>
+  <div class="nav-user">
+    <span class="nav-user-name" id="userName"></span>
+    <a href="/" class="nav-back">← Volver a la web</a>
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div class="login-wrap" id="loginWrap">
+  <div class="login-card">
+    <h2>Acceder al Club</h2>
+    <p class="sub">Introduce tus datos para entrar a tu área privada.</p>
+    <form onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label class="form-label" for="loginEmail">Email</label>
+        <input class="form-input" type="email" id="loginEmail" placeholder="tu@email.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="loginPass">Contraseña</label>
+        <input class="form-input" type="password" id="loginPass" placeholder="Tu contraseña" required>
+      </div>
+      <button type="submit" class="form-btn">Acceder</button>
+    </form>
+    <p class="login-register">¿No tienes cuenta? <a href="/club/registro.html">Registrarse</a></p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard" id="dashboard">
+  <div class="inner">
+
+    <div class="dash-header">
+      <div class="eyebrow">Club Mujer 360°</div>
+      <h1>Bienvenida, <em id="dashName">miembro</em></h1>
+      <p>Tu espacio exclusivo con precios VIP y contenido solo para ti.</p>
+    </div>
+
+    <!-- BOUTIQUE VIP -->
+    <div class="dash-section">
+      <h2 class="dash-section-title">Boutique <em>precio VIP</em></h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-name">Sérum Vitamina C</div>
+          <div class="product-desc">Ilumina, protege y unifica el tono. Uso diario por la mañana.</div>
+          <div class="product-prices">
+            <span class="price-original">45 €</span>
+            <span class="price-vip">36 €</span>
+            <span class="vip-badge">VIP</span>
+          </div>
+          <button class="product-btn">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Crema Reafirmante Corporal</div>
+          <div class="product-desc">Tonifica, nutre y mejora la elasticidad. Aplicar después de la ducha.</div>
+          <div class="product-prices">
+            <span class="price-original">38 €</span>
+            <span class="price-vip">30 €</span>
+            <span class="vip-badge">VIP</span>
+          </div>
+          <button class="product-btn">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Contorno de Ojos Antiedad</div>
+          <div class="product-desc">Reduce ojeras, bolsas y líneas finas. Textura ligera y absorción rápida.</div>
+          <div class="product-prices">
+            <span class="price-original">52 €</span>
+            <span class="price-vip">42 €</span>
+            <span class="vip-badge">VIP</span>
+          </div>
+          <button class="product-btn">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Collar Cadena Dorada</div>
+          <div class="product-desc">Complemento de moda seleccionado por expertas. Baño de oro.</div>
+          <div class="product-prices">
+            <span class="price-original">28 €</span>
+            <span class="price-vip">22 €</span>
+            <span class="vip-badge">VIP</span>
+          </div>
+          <button class="product-btn">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Aceite Corporal Nutritivo</div>
+          <div class="product-desc">Aceites esenciales y omegas para pieles maduras. Aroma envolvente.</div>
+          <div class="product-prices">
+            <span class="price-original">35 €</span>
+            <span class="price-vip">28 €</span>
+            <span class="vip-badge">VIP</span>
+          </div>
+          <button class="product-btn">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Set Labiales Nude</div>
+          <div class="product-desc">Tres tonos nude que favorecen a todas. Larga duración e hidratación.</div>
+          <div class="product-prices">
+            <span class="price-original">24 €</span>
+            <span class="price-vip">19 €</span>
+            <span class="vip-badge">VIP</span>
+          </div>
+          <button class="product-btn">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENIDO EXCLUSIVO -->
+    <div class="dash-section">
+      <h2 class="dash-section-title">Contenido <em>exclusivo</em></h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <div class="content-tag">Skincare</div>
+          <div class="content-title">Tu rutina facial después de los 45: lo que funciona de verdad</div>
+          <div class="content-excerpt">Olvida lo que te han vendido. Te contamos qué necesita tu piel según tu etapa hormonal.</div>
+          <a href="#" class="content-link">Leer artículo →</a>
+        </div>
+        <div class="content-card">
+          <div class="content-tag">Nutrición</div>
+          <div class="content-title">Menopausia y peso: por qué las dietas ya no funcionan</div>
+          <div class="content-excerpt">Tu metabolismo ha cambiado. La solución no es comer menos, es comer diferente.</div>
+          <a href="#" class="content-link">Leer artículo →</a>
+        </div>
+        <div class="content-card">
+          <div class="content-tag">Bienestar</div>
+          <div class="content-title">El poder del ritual: por qué tocarte con intención cambia cómo te sientes</div>
+          <div class="content-excerpt">No es solo cosmética. Es un acto de reconexión contigo misma.</div>
+          <a href="#" class="content-link">Leer artículo →</a>
+        </div>
+        <div class="content-card">
+          <div class="content-tag">Taller</div>
+          <div class="content-title">Próximo taller: Belleza Consciente — 12 abril</div>
+          <div class="content-excerpt">Maquillaje, colorimetría y estilo. Plazas limitadas para miembros del Club.</div>
+          <a href="#" class="content-link">Reservar plaza →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function handleLogin(e) {
+  e.preventDefault();
+  // Aquí se conectará con Base44 cuando esté listo
+  const email = document.getElementById('loginEmail').value;
+  const name = email.split('@')[0].replace(/[._]/g, ' ');
+  document.getElementById('loginWrap').classList.add('hidden');
+  document.getElementById('dashboard').classList.add('active');
+  document.getElementById('dashName').textContent = name;
+  document.getElementById('userName').textContent = name;
+}
+</script>
+</body>
+</html>

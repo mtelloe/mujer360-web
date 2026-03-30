@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Online — Mujer 360 Grados | Muy pronto</title>
+<meta name="description" content="La tienda online de Mujer 360 Grados está en camino. Cosmética profesional, complementos de moda y productos de belleza. Déjanos tu email y te avisamos.">
+<link rel="canonical" href="https://www.mujer360grados.com/tienda.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --cream:  #FFFFFF;
+  --sand:   #F4F0EF;
+  --blush:  #F4F0EF;
+  --wine:   #C4A882;
+  --wine-h: #B89B72;
+  --gold:   #C4A882;
+  --gold-l: #D4BA96;
+  --ink:    #303030;
+  --ink-50: rgba(48,48,48,.5);
+  --brd:    rgba(196,168,130,.15);
+  --serif:  'Cormorant Garamond', Georgia, serif;
+  --sans:   'Manrope', system-ui, sans-serif;
+}
+html { scroll-behavior:smooth; }
+body {
+  font-family:var(--sans); color:var(--ink); background:var(--cream);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  min-height:100vh; display:flex; flex-direction:column;
+}
+a { text-decoration:none; color:inherit; }
+img { display:block; max-width:100%; }
+
+/* ══ NAV ══════════════════════════════════════════════════ */
+.nav {
+  height:72px; padding:0 clamp(1.5rem,4vw,4rem);
+  display:flex; align-items:center; justify-content:space-between;
+  background:var(--cream); border-bottom:1px solid var(--brd);
+}
+.nav img { height:42px; }
+.nav-back {
+  font-size:.7rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-50); display:flex; align-items:center; gap:.5rem;
+  transition:color .3s;
+}
+.nav-back:hover { color:var(--wine); }
+
+/* ══ HERO TIENDA ═════════════════════════════════════════ */
+.tienda-hero {
+  flex:1; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  text-align:center; padding:clamp(4rem,10vw,8rem) 2rem;
+  position:relative; overflow:hidden;
+}
+.tienda-hero::before {
+  content:'SHOP'; position:absolute; font-family:var(--serif);
+  font-size:clamp(10rem,25vw,22rem); font-weight:600;
+  color:rgba(125,32,80,.03);
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  pointer-events:none; white-space:nowrap;
+}
+
+.tienda-badge {
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:var(--blush); border:1px solid var(--brd);
+  padding:.5rem 1.2rem; margin-bottom:2rem;
+  font-size:.65rem; font-weight:500; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--wine);
+}
+.tienda-badge::before {
+  content:''; width:8px; height:8px; border-radius:50%;
+  background:var(--gold-l); animation:pulse 2s ease infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:.4; transform:scale(.8); }
+}
+
+.tienda-hero h1 {
+  font-family:var(--serif); font-weight:500;
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  line-height:1.08; margin-bottom:1.5rem;
+  position:relative;
+}
+.tienda-hero h1 em { font-style:italic; color:var(--wine); display:block; margin-top:.1em; }
+
+.tienda-hero .body-txt {
+  font-size:1rem; font-weight:300; line-height:1.85;
+  color:var(--ink-50); max-width:520px; margin-bottom:2.5rem;
+}
+
+/* ── Productos preview ── */
+.tienda-preview {
+  display:flex; gap:1.5rem; margin-bottom:3rem;
+  flex-wrap:wrap; justify-content:center;
+}
+.tienda-preview-card {
+  width:160px; background:white; padding:1.2rem;
+  border:1px solid var(--brd); text-align:center;
+  transition:transform .3s, box-shadow .3s;
+}
+.tienda-preview-card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 8px 30px rgba(125,32,80,.08);
+}
+.tienda-preview-card img {
+  width:100%; aspect-ratio:1; object-fit:cover; margin-bottom:.8rem;
+}
+.tienda-preview-card span {
+  font-size:.68rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink-50);
+}
+
+/* ── Formulario ── */
+.tienda-form {
+  display:flex; flex-wrap:wrap; gap:.8rem;
+  justify-content:center; align-items:flex-start;
+  max-width:460px; width:100%;
+}
+.tienda-form input[type="email"] {
+  font-family:var(--sans); font-size:.88rem;
+  padding:.95rem 1.4rem; border:1.5px solid var(--brd);
+  background:white; color:var(--ink); flex:1; min-width:220px;
+  outline:none; transition:border-color .3s;
+}
+.tienda-form input[type="email"]:focus { border-color:var(--wine); }
+.tienda-form button {
+  font-family:var(--sans); font-size:.7rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase;
+  background:var(--wine); color:var(--cream); border:none;
+  padding:.95rem 2.2rem; cursor:pointer; transition:all .3s;
+}
+.tienda-form button:hover { background:var(--wine-h); transform:translateY(-2px); }
+.tienda-ok {
+  display:none; width:100%; text-align:center;
+  color:var(--wine); font-size:.88rem; margin-top:.5rem;
+  font-weight:400;
+}
+
+/* ══ FOOTER ══════════════════════════════════════════════ */
+footer {
+  background:#0D0810; color:rgba(250,247,244,.3);
+  padding:2rem clamp(1.5rem,4vw,4rem);
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+}
+.foot-brand { font-family:var(--serif); font-size:1.1rem; font-weight:500; color:rgba(250,247,244,.6); }
+.foot-copy { font-size:.68rem; }
+
+@media (max-width:600px) {
+  .tienda-preview-card { width:130px; }
+  .tienda-form { flex-direction:column; align-items:stretch; }
+  .tienda-form input[type="email"] { min-width:auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html"><img src="img/Logo-transparent.png" alt="Mujer 360 Grados" width="42" height="42"></a>
+  <a href="index.html" class="nav-back">&larr; Volver a la web</a>
+</nav>
+
+<!-- TIENDA -->
+<main class="tienda-hero">
+  <div class="tienda-badge">En construcción</div>
+  <h1>Tu boutique,<em>muy pronto online.</em></h1>
+  <p class="body-txt">Estamos preparando nuestra tienda online para que puedas llevarte la cosmética, los complementos y los productos que ya conoces del centro. Déjanos tu email y te avisamos cuando esté lista.</p>
+
+  <div class="tienda-preview">
+    <div class="tienda-preview-card">
+      <img src="img/Cosmeticos.jpeg" alt="Cosmética profesional Mujer 360" loading="lazy">
+      <span>Cosmética</span>
+    </div>
+    <div class="tienda-preview-card">
+      <img src="img/Boutique.jpg" alt="Complementos de moda Mujer 360" loading="lazy">
+      <span>Complementos</span>
+    </div>
+    <div class="tienda-preview-card">
+      <img src="img/Maquillaje.JPG" alt="Maquillaje profesional Mujer 360" loading="lazy">
+      <span>Maquillaje</span>
+    </div>
+  </div>
+
+  <form class="tienda-form" name="lista-tienda" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="lista-tienda">
+    <p style="display:none"><input name="bot-field"></p>
+    <input type="email" name="email" placeholder="Tu email" required aria-label="Email para notificación de apertura de tienda">
+    <button type="submit">Avísame</button>
+  </form>
+  <div class="tienda-ok" id="formOk" style="display:none;">¡Perfecto! Te avisaremos cuando abramos la tienda.</div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-brand">Mujer 360&deg;</div>
+  <div class="foot-copy">&copy; 2026 Mujer 360 Grados S.L.</div>
+</footer>
+
+<script>
+const form = document.querySelector('.tienda-form');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(new FormData(form)).toString()
+  }).then(() => {
+    form.style.display = 'none';
+    document.getElementById('formOk').style.display = 'block';
+  }).catch(() => {
+    form.style.display = 'none';
+    document.getElementById('formOk').style.display = 'block';
+  });
+});
+</script>
+</body>
+</html>
